@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (40 ms)
+  ✕ renders learn react link (51 ms)
 
   ● renders learn react link
 
@@ -62,31 +62,58 @@ FAIL src/App.test.tsx
               [36m</div>[39m
             [36m</div>[39m
           [36m</div>[39m
-          [36m<footer[39m
-            [33mclass[39m=[32m"App-footer"[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"container"[39m
           [36m>[39m
+            [36m<a[39m
+              [33mhref[39m=[32m"https://github.com/MichaelLutz1/starter_helpi"[39m
+              [33mrel[39m=[32m"noreferrer"[39m
+              [33mtarget[39m=[32m"_blank"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-secondary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mfill[39m=[32m"currentColor"[39m
+                  [33mheight[39m=[32m"1em"[39m
+                  [33mstroke[39m=[32m"currentColor"[39m
+                  [33mstroke-width[39m=[32m"0"[39m
+                  [33mviewBox[39m=[32m"0 0 16 16"[39m
+                  [33mwidth[39m=[32m"1em"[39m
+                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+              [36m</button>[39m
+            [36m</a>[39m
             [36m<form[39m
               [33mclass[39m=[32m""[39m
             [36m>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-label"[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"input-group"[39m
               [36m>[39m
-                [0mAPI Key:[0m
-              [36m</label>[39m
-              [36m<input[39m
-                [33mclass[39m=[32m"form-control"[39m
-                [33mplaceholder[39m=[32m"Insert API Key Here"[39m
-                [33mtype[39m=[32m"password"[39m
-              [36m/>[39m
-              [36m<br />[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"Submit-Button btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mSubmit[0m
-              [36m</button>[39m
+                [36m<input[39m
+                  [33mclass[39m=[32m"form-control"[39m
+                  [33mplaceholder[39m=[32m"Insert API Key Here"[39m
+                  [33mtype[39m=[32m"password"[39m
+                [36m/>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"Submit-Button btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mSubmit[0m
+                [36m</button>[39m
+              [36m</div>[39m
             [36m</form>[39m
-          [36m</footer>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"names-container"[39m
+            [36m>[39m
+              [0mMade by: Michael Forte, Michael Lutz, Jacob Wilber, Colin Parsons[0m
+            [36m</div>[39m
+          [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
     [36m</body>[39m
@@ -109,21 +136,23 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
----------------------|---------|----------|---------|---------|-------------------
-File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
----------------------|---------|----------|---------|---------|-------------------
-All files            |   31.81 |    16.66 |   33.33 |   31.81 |                   
- src                 |   28.57 |    16.66 |      20 |   28.57 |                   
-  App.tsx            |      60 |       50 |   33.33 |      60 | 11,19-25          
-  index.tsx          |       0 |      100 |     100 |       0 | 7-19              
-  reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/HomeScreen      |     100 |      100 |     100 |     100 |                   
-  HomeScreen.tsx     |     100 |      100 |     100 |     100 |                   
----------------------|---------|----------|---------|---------|-------------------
+---------------------------|---------|----------|---------|---------|-------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------------------|---------|----------|---------|---------|-------------------
+All files                  |   38.46 |    16.66 |    37.5 |   38.46 |                   
+ src                       |   28.57 |    16.66 |      20 |   28.57 |                   
+  App.tsx                  |      60 |       50 |   33.33 |      60 | 11,19-25          
+  index.tsx                |       0 |      100 |     100 |       0 | 8-20              
+  reportWebVitals.ts       |       0 |        0 |       0 |       0 | 3-10              
+ src/Components/AppFooter  |      75 |      100 |      50 |      75 |                   
+  AppFooter.tsx            |      75 |      100 |      50 |      75 | 11                
+ src/Components/HomeScreen |     100 |      100 |     100 |     100 |                   
+  HomeScreen.tsx           |     100 |      100 |     100 |     100 |                   
+---------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.624 s
+Time:        2.716 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
