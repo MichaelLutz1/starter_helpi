@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (51 ms)
+  ✕ renders learn react link (49 ms)
 
   ● renders learn react link
 
@@ -29,36 +29,48 @@ FAIL src/App.test.tsx
               [33mclass[39m=[32m"Both-boxes"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"Home-box card"[39m
+                [33mclass[39m=[32m"card-group"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"card-body"[39m
+                  [33mclass[39m=[32m"card"[39m
+                  [33mstyle[39m=[32m"height: 20rem; width: 30vh;"[39m
                 [36m>[39m
                   [36m<div[39m
-                    [33mclass[39m=[32m"card-title h5"[39m
+                    [33mclass[39m=[32m"card-header"[39m
+                    [33mstyle[39m=[32m"font-size: 18px; font-weight: bold;"[39m
                   [36m>[39m
                     [0mBasic Quiz[0m
                   [36m</div>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"card-text"[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"card-body"[39m
                   [36m>[39m
-                    [0mA description[0m
-                  [36m</p>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"card-text"[39m
+                    [36m>[39m
+                      [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
                 [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"Home-box Right-Box card"[39m
-              [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"card-title h5"[39m
+                  [33mclass[39m=[32m"card"[39m
+                  [33mstyle[39m=[32m"height: 20rem; width: 30vh;"[39m
                 [36m>[39m
-                  [0mDetailed Quiz[0m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"card-header"[39m
+                    [33mstyle[39m=[32m"font-size: 18px; font-weight: bold;"[39m
+                  [36m>[39m
+                    [0mDetailed Quiz[0m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"card-body"[39m
+                  [36m>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"card-text"[39m
+                    [36m>[39m
+                      [0mIf you have time and want a more refined answer choose this quiz! You will be asked more in depth questions and provoke more thoughts about your interests and personality. This quiz will also use AI to refine your answer even further and give a more specific answer.[0m
+                    [36m</p>[39m
+                  [36m</div>[39m
                 [36m</div>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"card-text"[39m
-                [36m>[39m
-                  [0mThe description[0m
-                [36m</p>[39m
               [36m</div>[39m
             [36m</div>[39m
           [36m</div>[39m
@@ -152,7 +164,7 @@ All files                  |   38.46 |    16.66 |    37.5 |   38.46 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.716 s
+Time:        2.892 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
