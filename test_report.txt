@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (63 ms)
+  ✕ renders learn react link (65 ms)
 
   ● renders learn react link
 
@@ -18,7 +18,7 @@ FAIL src/App.test.tsx
           [36m<nav[39m
             [33mclass[39m=[32m"navbar navbar-expand-lg navbar-light sticky-top"[39m
             [33mdata-bs-theme[39m=[32m"dark"[39m
-            [33mstyle[39m=[32m"color: white; background-color: rgb(14, 16, 20); height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
+            [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59); height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
           [36m>[39m
             [36m<div[39m
               [33mclass[39m=[32m"container"[39m
@@ -165,7 +165,8 @@ FAIL src/App.test.tsx
               [33mtarget[39m=[32m"_blank"[39m
             [36m>[39m
               [36m<button[39m
-                [33mclass[39m=[32m"btn btn-secondary"[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
                 [33mtype[39m=[32m"button"[39m
               [36m>[39m
                 [36m<svg[39m
@@ -196,6 +197,7 @@ FAIL src/App.test.tsx
                 [36m/>[39m
                 [36m<button[39m
                   [33mclass[39m=[32m"Submit-Button btn btn-primary"[39m
+                  [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
                   [33mtype[39m=[32m"button"[39m
                 [36m>[39m
                   [0mSubmit[0m
@@ -256,5 +258,5 @@ All files                      |   39.53 |    42.85 |      30 |   39.53 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.333 s
+Time:        2.484 s
 Ran all test suites.
