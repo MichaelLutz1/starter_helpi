@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (76 ms)
+  ✕ renders learn react link (61 ms)
 
   ● renders learn react link
 
@@ -15,6 +15,64 @@ FAIL src/App.test.tsx
         [36m<div[39m
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
+          [36m<nav[39m
+            [33mclass[39m=[32m"navbar navbar-expand-lg navbar-light bg-dark bg-dark gradient-custom rounded fixed-top"[39m
+            [33mdata-bs-theme[39m=[32m"dark"[39m
+            [33mstyle[39m=[32m"height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"container"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"brand-logo navbar-brand"[39m
+                [33mhref[39m=[32m"#home"[39m
+              [36m>[39m
+                [36m<img[39m
+                  [33malt[39m=[32m"logo"[39m
+                  [33mclass[39m=[32m"logo-img"[39m
+                  [33msrc[39m=[32m"SmallerWW-removebg-preview.png"[39m
+                [36m/>[39m
+              [36m</a>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"me-auto navbar-nav"[39m
+              [36m>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"nav-link"[39m
+                  [33mhref[39m=[32m"#"[39m
+                  [33mrole[39m=[32m"button"[39m
+                  [33mtabindex[39m=[32m"0"[39m
+                [36m>[39m
+                  [0mHome[0m
+                [36m</a>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"nav-link"[39m
+                  [33mhref[39m=[32m"#"[39m
+                  [33mrole[39m=[32m"button"[39m
+                  [33mtabindex[39m=[32m"0"[39m
+                [36m>[39m
+                  [0mBasic Quiz[0m
+                [36m</a>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"nav-link"[39m
+                  [33mhref[39m=[32m"#"[39m
+                  [33mrole[39m=[32m"button"[39m
+                  [33mtabindex[39m=[32m"0"[39m
+                [36m>[39m
+                  [0mDetailed Quiz[0m
+                [36m</a>[39m
+              [36m</div>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"navbar-text"[39m
+                [33mstyle[39m=[32m"margin-right: 25px;"[39m
+              [36m>[39m
+                [0mCurrent Page: [0m
+                [0mHome[0m
+              [36m</span>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"d-flex align-items-center"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</nav>[39m
           [36m<div[39m
             [33mclass[39m=[32m"Container"[39m
           [36m>[39m
@@ -167,9 +225,9 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   39.39 |    41.66 |   35.71 |   39.39 |                   
+All files                      |   39.53 |    42.85 |      30 |   39.53 |                   
  src                           |   31.81 |    41.66 |      20 |   31.81 |                   
-  App.tsx                      |   63.63 |     62.5 |   33.33 |   63.63 | 15,24-30          
+  App.tsx                      |   63.63 |     62.5 |   33.33 |   63.63 | 16,25-31          
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts           |       0 |        0 |       0 |       0 | 3-10              
  src/Components/AppFooter      |      75 |      100 |      50 |      75 |                   
@@ -184,9 +242,11 @@ All files                      |   39.39 |    41.66 |   35.71 |   39.39 |
   DetailedPage.tsx             |       0 |      100 |       0 |       0 | 4                 
  src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
+ src/Components/Navbar         |      40 |       50 |   16.66 |      40 |                   
+  Navbar.tsx                   |      40 |       50 |   16.66 |      40 | 13-14,18,28-30    
 -------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.385 s
+Time:        2.568 s
 Ran all test suites.
