@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (65 ms)
+  ✕ renders learn react link (91 ms)
 
   ● renders learn react link
 
@@ -235,7 +235,7 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   39.53 |    42.85 |      30 |   39.53 |                   
+All files                      |   37.77 |    42.85 |   28.57 |   37.77 |                   
  src                           |   31.81 |    41.66 |      20 |   31.81 |                   
   App.tsx                      |   63.63 |     62.5 |   33.33 |   63.63 | 16,25-31          
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
@@ -243,13 +243,13 @@ All files                      |   39.53 |    42.85 |      30 |   39.53 |
  src/Components/AppFooter      |      75 |      100 |      50 |      75 |                   
   AppFooter.tsx                |      75 |      100 |      50 |      75 | 11                
  src/Components/BasicButton    |      50 |      100 |      50 |      50 |                   
-  BasicButtton.tsx             |      50 |      100 |      50 |      50 | 10                
+  BasicButtton.tsx             |      50 |      100 |      50 |      50 | 11                
  src/Components/BasicPage      |       0 |      100 |       0 |       0 |                   
-  BasicPage.tsx                |       0 |      100 |       0 |       0 | 6                 
+  BasicPage.tsx                |       0 |      100 |       0 |       0 | 9-13              
  src/Components/DetailedButton |      50 |      100 |      50 |      50 |                   
-  DetailedButton.tsx           |      50 |      100 |      50 |      50 | 9                 
+  DetailedButton.tsx           |      50 |      100 |      50 |      50 | 10                
  src/Components/DetailedPage   |       0 |      100 |       0 |       0 |                   
-  DetailedPage.tsx             |       0 |      100 |       0 |       0 | 4                 
+  DetailedPage.tsx             |       0 |      100 |       0 |       0 | 5                 
  src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
  src/Components/Navbar         |      40 |       50 |   16.66 |      40 |                   
@@ -258,5 +258,5 @@ All files                      |   39.53 |    42.85 |      30 |   39.53 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.484 s
+Time:        2.708 s
 Ran all test suites.
