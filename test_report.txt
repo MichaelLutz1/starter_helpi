@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (60 ms)
+  ✕ renders learn react link (63 ms)
 
   ● renders learn react link
 
@@ -16,9 +16,9 @@ FAIL src/App.test.tsx
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
           [36m<nav[39m
-            [33mclass[39m=[32m"navbar navbar-expand-lg navbar-light bg-dark bg-dark gradient-custom rounded sticky-top"[39m
+            [33mclass[39m=[32m"navbar navbar-expand-lg navbar-light sticky-top"[39m
             [33mdata-bs-theme[39m=[32m"dark"[39m
-            [33mstyle[39m=[32m"height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
+            [33mstyle[39m=[32m"color: white; background-color: rgb(14, 16, 20); height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
           [36m>[39m
             [36m<div[39m
               [33mclass[39m=[32m"container"[39m
@@ -80,7 +80,13 @@ FAIL src/App.test.tsx
               [33mclass[39m=[32m"Title"[39m
             [36m>[39m
               [36m<h1>[39m
-                [0mSelect A Quiz:[0m
+                [0mSelect A [0m
+                [36m<span[39m
+                  [33mstyle[39m=[32m"color: rgb(105, 35, 255);"[39m
+                [36m>[39m
+                  [0mQuiz[0m
+                [36m</span>[39m
+                [0m:[0m
               [36m</h1>[39m
             [36m</div>[39m
             [36m<div[39m
@@ -91,7 +97,7 @@ FAIL src/App.test.tsx
               [36m>[39m
                 [36m<div[39m
                   [33mclass[39m=[32m"card"[39m
-                  [33mstyle[39m=[32m"width: 30vh;"[39m
+                  [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59); width: 30vh;"[39m
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"card-header"[39m
@@ -111,7 +117,7 @@ FAIL src/App.test.tsx
                   [36m<div>[39m
                     [36m<button[39m
                       [33mclass[39m=[32m"btn btn-primary"[39m
-                      [33mstyle[39m=[32m"margin: 1rem;"[39m
+                      [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
                       [0mTake Quiz![0m
@@ -120,7 +126,7 @@ FAIL src/App.test.tsx
                 [36m</div>[39m
                 [36m<div[39m
                   [33mclass[39m=[32m"card"[39m
-                  [33mstyle[39m=[32m"width: 30vh;"[39m
+                  [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59); width: 30vh;"[39m
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"card-header"[39m
@@ -140,7 +146,7 @@ FAIL src/App.test.tsx
                   [36m<div>[39m
                     [36m<button[39m
                       [33mclass[39m=[32m"btn btn-primary"[39m
-                      [33mstyle[39m=[32m"margin: 1rem;"[39m
+                      [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
                       [0mTake Quiz![0m
@@ -250,5 +256,5 @@ All files                      |   39.53 |    42.85 |      30 |   39.53 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.367 s
+Time:        2.333 s
 Ran all test suites.
