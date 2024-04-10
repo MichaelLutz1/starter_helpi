@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (91 ms)
+  ✕ renders learn react link (88 ms)
 
   ● renders learn react link
 
@@ -207,7 +207,44 @@ FAIL src/App.test.tsx
             [36m<div[39m
               [33mclass[39m=[32m"names-container"[39m
             [36m>[39m
-              [0mMade by: Michael Forte, Michael Lutz, Jacob Wilber, Colin Parsons[0m
+              [36m<span>[39m
+                [0mMade by: [0m
+              [36m</span>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"gh-profile"[39m
+                [33mhref[39m=[32m"https://github.com/Mforte5115"[39m
+                [33mrel[39m=[32m"noreferrer"[39m
+                [33mtarget[39m=[32m"_blank"[39m
+              [36m>[39m
+                [0mMichael Forte[0m
+              [36m</a>[39m
+              [0m,[0m
+              [36m<a[39m
+                [33mclass[39m=[32m"gh-profile"[39m
+                [33mhref[39m=[32m"https://github.com/MichaelLutz1"[39m
+                [33mrel[39m=[32m"noreferrer"[39m
+                [33mtarget[39m=[32m"_blank"[39m
+              [36m>[39m
+                [0m Michael Lutz[0m
+              [36m</a>[39m
+              [0m,[0m
+              [36m<a[39m
+                [33mclass[39m=[32m"gh-profile"[39m
+                [33mhref[39m=[32m"https://github.com/jacobwilbe"[39m
+                [33mrel[39m=[32m"noreferrer"[39m
+                [33mtarget[39m=[32m"_blank"[39m
+              [36m>[39m
+                [0m Jacob Wilber[0m
+              [36m</a>[39m
+              [0m,[0m
+              [36m<a[39m
+                [33mclass[39m=[32m"gh-profile"[39m
+                [33mhref[39m=[32m"https://github.com/ColinP5"[39m
+                [33mrel[39m=[32m"noreferrer"[39m
+                [33mtarget[39m=[32m"_blank"[39m
+              [36m>[39m
+                [0m Colin Parsons[0m
+              [36m</a>[39m
             [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
@@ -258,5 +295,5 @@ All files                      |   37.77 |    42.85 |   28.57 |   37.77 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.708 s
+Time:        2.458 s
 Ran all test suites.
