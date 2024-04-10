@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (61 ms)
+  ✕ renders learn react link (60 ms)
 
   ● renders learn react link
 
@@ -16,7 +16,7 @@ FAIL src/App.test.tsx
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
           [36m<nav[39m
-            [33mclass[39m=[32m"navbar navbar-expand-lg navbar-light bg-dark bg-dark gradient-custom rounded fixed-top"[39m
+            [33mclass[39m=[32m"navbar navbar-expand-lg navbar-light bg-dark bg-dark gradient-custom rounded sticky-top"[39m
             [33mdata-bs-theme[39m=[32m"dark"[39m
             [33mstyle[39m=[32m"height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
           [36m>[39m
@@ -91,7 +91,7 @@ FAIL src/App.test.tsx
               [36m>[39m
                 [36m<div[39m
                   [33mclass[39m=[32m"card"[39m
-                  [33mstyle[39m=[32m"height: 20rem; width: 30vh;"[39m
+                  [33mstyle[39m=[32m"width: 30vh;"[39m
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"card-header"[39m
@@ -111,6 +111,7 @@ FAIL src/App.test.tsx
                   [36m<div>[39m
                     [36m<button[39m
                       [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"margin: 1rem;"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
                       [0mTake Quiz![0m
@@ -119,7 +120,7 @@ FAIL src/App.test.tsx
                 [36m</div>[39m
                 [36m<div[39m
                   [33mclass[39m=[32m"card"[39m
-                  [33mstyle[39m=[32m"height: 20rem; width: 30vh;"[39m
+                  [33mstyle[39m=[32m"width: 30vh;"[39m
                 [36m>[39m
                   [36m<div[39m
                     [33mclass[39m=[32m"card-header"[39m
@@ -133,12 +134,13 @@ FAIL src/App.test.tsx
                     [36m<p[39m
                       [33mclass[39m=[32m"card-text"[39m
                     [36m>[39m
-                      [0mIf you have time and want a more refined answer choose this quiz! You will be asked more in depth questions and provoke more thoughts about your interests and personality. This quiz will also use AI to refine your answer even further and give a more specific answer.[0m
+                      [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
                     [36m</p>[39m
                   [36m</div>[39m
                   [36m<div>[39m
                     [36m<button[39m
                       [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"margin: 1rem;"[39m
                       [33mtype[39m=[32m"button"[39m
                     [36m>[39m
                       [0mTake Quiz![0m
@@ -248,5 +250,5 @@ All files                      |   39.53 |    42.85 |      30 |   39.53 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.568 s
+Time:        2.367 s
 Ran all test suites.
