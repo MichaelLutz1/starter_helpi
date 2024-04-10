@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (49 ms)
+  ✕ renders learn react link (73 ms)
 
   ● renders learn react link
 
@@ -44,11 +44,29 @@ FAIL src/App.test.tsx
                   [36m<div[39m
                     [33mclass[39m=[32m"card-body"[39m
                   [36m>[39m
+                    [36m<div[39m
+                      [33mclass[39m=[32m"card-title h5"[39m
+                    [36m>[39m
+                      [0mBasic Quiz[0m
+                    [36m</div>[39m
+                    [36m<p[39m
+                      [33mclass[39m=[32m"card-text"[39m
+                    [36m>[39m
+                      [0mA description[0m
+                    [36m</p>[39m
                     [36m<p[39m
                       [33mclass[39m=[32m"card-text"[39m
                     [36m>[39m
                       [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
                     [36m</p>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mTake Quiz![0m
+                      [36m</button>[39m
+                    [36m</div>[39m
                   [36m</div>[39m
                 [36m</div>[39m
                 [36m<div[39m
@@ -69,6 +87,14 @@ FAIL src/App.test.tsx
                     [36m>[39m
                       [0mIf you have time and want a more refined answer choose this quiz! You will be asked more in depth questions and provoke more thoughts about your interests and personality. This quiz will also use AI to refine your answer even further and give a more specific answer.[0m
                     [36m</p>[39m
+                    [36m<div>[39m
+                      [36m<button[39m
+                        [33mclass[39m=[32m"btn btn-primary"[39m
+                        [33mtype[39m=[32m"button"[39m
+                      [36m>[39m
+                        [0mTake Quiz![0m
+                      [36m</button>[39m
+                    [36m</div>[39m
                   [36m</div>[39m
                 [36m</div>[39m
               [36m</div>[39m
@@ -148,33 +174,29 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
----------------------------|---------|----------|---------|---------|-------------------
-File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
----------------------------|---------|----------|---------|---------|-------------------
-All files                  |   38.46 |    16.66 |    37.5 |   38.46 |                   
- src                       |   28.57 |    16.66 |      20 |   28.57 |                   
-  App.tsx                  |      60 |       50 |   33.33 |      60 | 11,19-25          
-  index.tsx                |       0 |      100 |     100 |       0 | 8-20              
-  reportWebVitals.ts       |       0 |        0 |       0 |       0 | 3-10              
- src/Components/AppFooter  |      75 |      100 |      50 |      75 |                   
-  AppFooter.tsx            |      75 |      100 |      50 |      75 | 11                
- src/Components/HomeScreen |     100 |      100 |     100 |     100 |                   
-  HomeScreen.tsx           |     100 |      100 |     100 |     100 |                   
----------------------------|---------|----------|---------|---------|-------------------
+-------------------------------|---------|----------|---------|---------|-------------------
+File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------------------|---------|----------|---------|---------|-------------------
+All files                      |   39.39 |    41.66 |   35.71 |   39.39 |                   
+ src                           |   31.81 |    41.66 |      20 |   31.81 |                   
+  App.tsx                      |   63.63 |     62.5 |   33.33 |   63.63 | 15,24-30          
+  index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
+  reportWebVitals.ts           |       0 |        0 |       0 |       0 | 3-10              
+ src/Components/AppFooter      |      75 |      100 |      50 |      75 |                   
+  AppFooter.tsx                |      75 |      100 |      50 |      75 | 11                
+ src/Components/BasicButton    |      50 |      100 |      50 |      50 |                   
+  BasicButtton.tsx             |      50 |      100 |      50 |      50 | 10                
+ src/Components/BasicPage      |       0 |      100 |       0 |       0 |                   
+  BasicPage.tsx                |       0 |      100 |       0 |       0 | 6                 
+ src/Components/DetailedButton |      50 |      100 |      50 |      50 |                   
+  DetailedButton.tsx           |      50 |      100 |      50 |      50 | 9                 
+ src/Components/DetailedPage   |       0 |      100 |       0 |       0 |                   
+  DetailedPage.tsx             |       0 |      100 |       0 |       0 | 4                 
+ src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
+  HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
+-------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.892 s
+Time:        2.414 s
 Ran all test suites.
-[0;33mOne of your dependencies, babel-preset-react-app, is importing the
-"@babel/plugin-proposal-private-property-in-object" package without
-declaring it in its dependencies. This is currently working because
-"@babel/plugin-proposal-private-property-in-object" is already in your
-node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
-
-babel-preset-react-app is part of the create-react-app project, [1mwhich
-is not maintianed anymore[0;33m. It is thus unlikely that this bug will
-ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
-your devDependencies to work around this error. This will make this message
-go away.[0m
-  
