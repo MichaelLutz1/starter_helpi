@@ -54,7 +54,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (109 ms)
+  ✕ renders learn react link (113 ms)
 
   ● renders learn react link
 
@@ -99,7 +99,7 @@ FAIL src/App.test.tsx
                 [33mid[39m=[32m"basic-navbar-nav"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"me-auto navbar-nav"[39m
+                  [33mclass[39m=[32m"mx-auto navbar-nav"[39m
                 [36m>[39m
                   [36m<a[39m
                     [33mclass[39m=[32m"nav-link"[39m
@@ -154,11 +154,11 @@ FAIL src/App.test.tsx
               [33mclass[39m=[32m"Title"[39m
             [36m>[39m
               [36m<h1>[39m
-                [0mSelect A [0m
+                [0mDiscover your dream [0m
                 [36m<span[39m
                   [33mstyle[39m=[32m"color: rgb(105, 35, 255);"[39m
                 [36m>[39m
-                  [0mQuiz[0m
+                  [0mCareer[0m
                 [36m</span>[39m
               [36m</h1>[39m
             [36m</div>[39m
@@ -210,7 +210,7 @@ FAIL src/App.test.tsx
                   [36m<p[39m
                     [33mclass[39m=[32m"card-desc card-text"[39m
                   [36m>[39m
-                    [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
+                    [0mIf you want a more in depth assessment of the career that you were made for, choose this quiz! You will be asked more in depth questions and provoke more thoughts about your interests and personality. This quiz will also use AI to refine your answer even further and give a more specific answer.[0m
                   [36m</p>[39m
                 [36m</div>[39m
                 [36m<div>[39m
@@ -364,5 +364,5 @@ All files                      |   36.17 |    51.85 |   27.27 |   36.17 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.491 s
+Time:        2.608 s
 Ran all test suites.
