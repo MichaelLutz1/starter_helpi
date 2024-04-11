@@ -2,8 +2,59 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
+  console.error
+    Warning: The tag <text> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
+        at text
+        at a
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/@restart/ui/cjs/Anchor.js:23:7
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/NavLink.js:17:3
+        at div
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/@restart/ui/cjs/Nav.js:26:11
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Nav.js:33:43
+        at div
+        at Transition (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-transition-group/cjs/Transition.js:135:30)
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/TransitionWrapper.js:16:3
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Collapse.js:38:3
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/NavbarCollapse.js:16:3
+        at div
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Container.js:14:3
+        at nav
+        at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Navbar.js:38:43
+        at Navbar2 (/home/runner/work/starter_helpi/starter_helpi/src/Components/Navbar/Navbar.tsx:10:27)
+        at div
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:20:33)
+
+      4 |
+      5 | test('renders learn react link', () => {
+    > 6 |   render(<App />);
+        |         ^
+      7 |   const linkElement = screen.getByText(/learn react/i);
+      8 |   expect(linkElement).toBeInTheDocument();
+      9 | });
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at createElement (node_modules/react-dom/cjs/react-dom.development.js:9816:9)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10941:20)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25738:74)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.tsx:6:9)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
 FAIL src/App.test.tsx
-  ✕ renders learn react link (81 ms)
+  ✕ renders learn react link (109 ms)
 
   ● renders learn react link
 
@@ -21,7 +72,7 @@ FAIL src/App.test.tsx
             [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59); height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
           [36m>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"container"[39m
+              [33mclass[39m=[32m"container-fluid"[39m
             [36m>[39m
               [36m<a[39m
                 [33mclass[39m=[32m"brand-logo navbar-brand"[39m
@@ -30,47 +81,70 @@ FAIL src/App.test.tsx
                 [36m<img[39m
                   [33malt[39m=[32m"logo"[39m
                   [33mclass[39m=[32m"logo-img"[39m
-                  [33msrc[39m=[32m"SmallerWW-removebg-preview.png"[39m
+                  [33msrc[39m=[32m"FinalLogo.png"[39m
                 [36m/>[39m
               [36m</a>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"me-auto navbar-nav"[39m
+              [36m<button[39m
+                [33maria-controls[39m=[32m"basic-navbar-nav"[39m
+                [33maria-label[39m=[32m"Toggle navigation"[39m
+                [33mclass[39m=[32m"navbar-toggler collapsed"[39m
+                [33mtype[39m=[32m"button"[39m
               [36m>[39m
-                [36m<a[39m
-                  [33mclass[39m=[32m"nav-link"[39m
-                  [33mhref[39m=[32m"#"[39m
-                  [33mrole[39m=[32m"button"[39m
-                  [33mtabindex[39m=[32m"0"[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"navbar-toggler-icon"[39m
+                [36m/>[39m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"navbar-collapse collapse"[39m
+                [33mid[39m=[32m"basic-navbar-nav"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"me-auto navbar-nav"[39m
                 [36m>[39m
+                  [36m<a[39m
+                    [33mclass[39m=[32m"nav-link"[39m
+                    [33mhref[39m=[32m"#"[39m
+                    [33mrole[39m=[32m"button"[39m
+                    [33mtabindex[39m=[32m"0"[39m
+                  [36m>[39m
+                    [36m<text[39m
+                      [33mclass[39m=[32m"navbar-selected"[39m
+                    [36m>[39m
+                      [0mHome[0m
+                    [36m</text>[39m
+                  [36m</a>[39m
+                  [36m<a[39m
+                    [33mclass[39m=[32m"nav-link"[39m
+                    [33mhref[39m=[32m"#"[39m
+                    [33mrole[39m=[32m"button"[39m
+                    [33mtabindex[39m=[32m"0"[39m
+                  [36m>[39m
+                    [36m<text>[39m
+                      [0mBasic[0m
+                    [36m</text>[39m
+                  [36m</a>[39m
+                  [36m<a[39m
+                    [33mclass[39m=[32m"nav-link"[39m
+                    [33mhref[39m=[32m"#"[39m
+                    [33mrole[39m=[32m"button"[39m
+                    [33mtabindex[39m=[32m"0"[39m
+                  [36m>[39m
+                    [36m<text>[39m
+                      [0mDetailed[0m
+                    [36m</text>[39m
+                  [36m</a>[39m
+                [36m</div>[39m
+                [36m<span[39m
+                  [33mclass[39m=[32m"navbar-text"[39m
+                  [33mstyle[39m=[32m"margin-right: 25px;"[39m
+                [36m>[39m
+                  [0mCurrent Page: [0m
                   [0mHome[0m
-                [36m</a>[39m
-                [36m<a[39m
-                  [33mclass[39m=[32m"nav-link"[39m
-                  [33mhref[39m=[32m"#"[39m
-                  [33mrole[39m=[32m"button"[39m
-                  [33mtabindex[39m=[32m"0"[39m
-                [36m>[39m
-                  [0mBasic Quiz[0m
-                [36m</a>[39m
-                [36m<a[39m
-                  [33mclass[39m=[32m"nav-link"[39m
-                  [33mhref[39m=[32m"#"[39m
-                  [33mrole[39m=[32m"button"[39m
-                  [33mtabindex[39m=[32m"0"[39m
-                [36m>[39m
-                  [0mDetailed Quiz[0m
-                [36m</a>[39m
+                [36m</span>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"d-flex align-items-center"[39m
+                [36m/>[39m
               [36m</div>[39m
-              [36m<span[39m
-                [33mclass[39m=[32m"navbar-text"[39m
-                [33mstyle[39m=[32m"margin-right: 25px;"[39m
-              [36m>[39m
-                [0mCurrent Page: [0m
-                [0mHome[0m
-              [36m</span>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"d-flex align-items-center"[39m
-              [36m/>[39m
             [36m</div>[39m
           [36m</nav>[39m
           [36m<div[39m
@@ -267,7 +341,7 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   36.95 |       40 |   28.57 |   36.95 |                   
+All files                      |   36.17 |    51.85 |   27.27 |   36.17 |                   
  src                           |   31.81 |    41.66 |      20 |   31.81 |                   
   App.tsx                      |   63.63 |     62.5 |   33.33 |   63.63 | 16,25-31          
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
@@ -284,11 +358,11 @@ All files                      |   36.95 |       40 |   28.57 |   36.95 |
   DetailedPage.tsx             |       0 |      100 |       0 |       0 | 5                 
  src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
- src/Components/Navbar         |      40 |    33.33 |   16.66 |      40 |                   
-  Navbar.tsx                   |      40 |    33.33 |   16.66 |      40 | 14-15,19,29-31    
+ src/Components/Navbar         |   36.36 |       60 |   14.28 |   36.36 |                   
+  Navbar.tsx                   |   36.36 |       60 |   14.28 |   36.36 | 14-15,19,25-37    
 -------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.578 s
+Time:        2.491 s
 Ran all test suites.
