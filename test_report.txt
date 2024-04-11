@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (88 ms)
+  ✕ renders learn react link (81 ms)
 
   ● renders learn react link
 
@@ -86,72 +86,67 @@ FAIL src/App.test.tsx
                 [36m>[39m
                   [0mQuiz[0m
                 [36m</span>[39m
-                [0m:[0m
               [36m</h1>[39m
             [36m</div>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"Both-boxes"[39m
+              [33mclass[39m=[32m"card-container"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"card-group"[39m
+                [33mclass[39m=[32m"card"[39m
+                [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59);"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"card"[39m
-                  [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59); width: 30vh;"[39m
+                  [33mclass[39m=[32m"card-header"[39m
+                  [33mstyle[39m=[32m"font-size: 18px; font-weight: bold; padding: 1rem 0rem;"[39m
                 [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"card-header"[39m
-                    [33mstyle[39m=[32m"font-size: 18px; font-weight: bold;"[39m
-                  [36m>[39m
-                    [0mBasic Quiz[0m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"card-body"[39m
-                  [36m>[39m
-                    [36m<p[39m
-                      [33mclass[39m=[32m"card-text"[39m
-                    [36m>[39m
-                      [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
-                    [36m</p>[39m
-                  [36m</div>[39m
-                  [36m<div>[39m
-                    [36m<button[39m
-                      [33mclass[39m=[32m"btn btn-primary"[39m
-                      [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
-                      [33mtype[39m=[32m"button"[39m
-                    [36m>[39m
-                      [0mTake Quiz![0m
-                    [36m</button>[39m
-                  [36m</div>[39m
+                  [0mBasic Quiz[0m
                 [36m</div>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"card"[39m
-                  [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59); width: 30vh;"[39m
+                  [33mclass[39m=[32m"card-body"[39m
                 [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"card-header"[39m
-                    [33mstyle[39m=[32m"font-size: 18px; font-weight: bold;"[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"card-desc card-text"[39m
                   [36m>[39m
-                    [0mDetailed Quiz[0m
-                  [36m</div>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"card-body"[39m
+                    [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
+                  [36m</p>[39m
+                [36m</div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
+                    [33mtype[39m=[32m"button"[39m
                   [36m>[39m
-                    [36m<p[39m
-                      [33mclass[39m=[32m"card-text"[39m
-                    [36m>[39m
-                      [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
-                    [36m</p>[39m
-                  [36m</div>[39m
-                  [36m<div>[39m
-                    [36m<button[39m
-                      [33mclass[39m=[32m"btn btn-primary"[39m
-                      [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
-                      [33mtype[39m=[32m"button"[39m
-                    [36m>[39m
-                      [0mTake Quiz![0m
-                    [36m</button>[39m
-                  [36m</div>[39m
+                    [0mTake Quiz![0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"card"[39m
+                [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59);"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"card-header"[39m
+                  [33mstyle[39m=[32m"font-size: 18px; font-weight: bold; padding: 1rem 0rem;"[39m
+                [36m>[39m
+                  [0mDetailed Quiz[0m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"card-body"[39m
+                [36m>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"card-desc card-text"[39m
+                  [36m>[39m
+                    [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
+                  [36m</p>[39m
+                [36m</div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary"[39m
+                    [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mTake Quiz![0m
+                  [36m</button>[39m
                 [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
@@ -272,7 +267,7 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   37.77 |    42.85 |   28.57 |   37.77 |                   
+All files                      |   36.95 |       40 |   28.57 |   36.95 |                   
  src                           |   31.81 |    41.66 |      20 |   31.81 |                   
   App.tsx                      |   63.63 |     62.5 |   33.33 |   63.63 | 16,25-31          
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
@@ -282,18 +277,18 @@ All files                      |   37.77 |    42.85 |   28.57 |   37.77 |
  src/Components/BasicButton    |      50 |      100 |      50 |      50 |                   
   BasicButtton.tsx             |      50 |      100 |      50 |      50 | 11                
  src/Components/BasicPage      |       0 |      100 |       0 |       0 |                   
-  BasicPage.tsx                |       0 |      100 |       0 |       0 | 9-13              
+  BasicPage.tsx                |       0 |      100 |       0 |       0 | 10-18             
  src/Components/DetailedButton |      50 |      100 |      50 |      50 |                   
   DetailedButton.tsx           |      50 |      100 |      50 |      50 | 10                
  src/Components/DetailedPage   |       0 |      100 |       0 |       0 |                   
   DetailedPage.tsx             |       0 |      100 |       0 |       0 | 5                 
  src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
- src/Components/Navbar         |      40 |       50 |   16.66 |      40 |                   
-  Navbar.tsx                   |      40 |       50 |   16.66 |      40 | 13-14,18,28-30    
+ src/Components/Navbar         |      40 |    33.33 |   16.66 |      40 |                   
+  Navbar.tsx                   |      40 |    33.33 |   16.66 |      40 | 14-15,19,29-31    
 -------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.458 s
+Time:        2.578 s
 Ran all test suites.
