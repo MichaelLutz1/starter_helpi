@@ -2,6 +2,11 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
+  console.log
+    null
+
+      at Object.<anonymous> (src/App.tsx:13:9)
+
   console.error
     Warning: The tag <text> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
         at text
@@ -22,7 +27,7 @@
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Navbar.js:38:43
         at Navbar2 (/home/runner/work/starter_helpi/starter_helpi/src/Components/Navbar/Navbar.tsx:10:27)
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:20:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:27:33)
 
       4 |
       5 | test('renders learn react link', () => {
@@ -54,7 +59,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (114 ms)
+  ✕ renders learn react link (107 ms)
 
   ● renders learn react link
 
@@ -341,9 +346,9 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   36.17 |    51.85 |   27.27 |   36.17 |                   
- src                           |   31.81 |    41.66 |      20 |   31.81 |                   
-  App.tsx                      |   63.63 |     62.5 |   33.33 |   63.63 | 16,25-31          
+All files                      |      40 |    51.72 |   26.08 |      40 |                   
+ src                           |      40 |    42.85 |   16.66 |      40 |                   
+  App.tsx                      |   63.15 |       60 |      25 |   63.15 | 15,23,32-43       
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts           |       0 |        0 |       0 |       0 | 3-10              
  src/Components/AppFooter      |      75 |      100 |      50 |      75 |                   
@@ -364,5 +369,5 @@ All files                      |   36.17 |    51.85 |   27.27 |   36.17 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.649 s
+Time:        2.739 s
 Ran all test suites.
