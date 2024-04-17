@@ -7,7 +7,7 @@ import './BasicPage.css'
 
 
 export function BasicPage() {
-    const questions: string[] = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5"]
+    const questions: string[] = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7"]
     let eventKey = 0;
     return (
         <div className='basic-page-container'>
