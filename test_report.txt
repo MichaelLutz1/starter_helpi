@@ -104,7 +104,7 @@ FAIL src/App.test.tsx
                 [33mid[39m=[32m"basic-navbar-nav"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"mx-auto navbar-nav"[39m
+                  [33mclass[39m=[32m"d-flex flex-grow-1 align-items-center justify-content-center navbar-nav"[39m
                 [36m>[39m
                   [36m<a[39m
                     [33mclass[39m=[32m"nav-link"[39m
@@ -112,11 +112,11 @@ FAIL src/App.test.tsx
                     [33mrole[39m=[32m"button"[39m
                     [33mtabindex[39m=[32m"0"[39m
                   [36m>[39m
-                    [36m<text[39m
+                    [36m<div[39m
                       [33mclass[39m=[32m"navbar-selected"[39m
                     [36m>[39m
                       [0mHome[0m
-                    [36m</text>[39m
+                    [36m</div>[39m
                   [36m</a>[39m
                   [36m<a[39m
                     [33mclass[39m=[32m"nav-link"[39m
@@ -139,16 +139,38 @@ FAIL src/App.test.tsx
                     [36m</text>[39m
                   [36m</a>[39m
                 [36m</div>[39m
-                [36m<span[39m
-                  [33mclass[39m=[32m"navbar-text"[39m
-                  [33mstyle[39m=[32m"margin-right: 25px;"[39m
-                [36m>[39m
-                  [0mCurrent Page: [0m
-                  [0mHome[0m
-                [36m</span>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"d-flex align-items-center"[39m
-                [36m/>[39m
+                  [33mclass[39m=[32m"ms-auto"[39m
+                [36m>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"disabled d-flex align-items-center navbar-back btn btn-primary"[39m
+                    [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [36m<svg[39m
+                      [33mfill[39m=[32m"currentColor"[39m
+                      [33mheight[39m=[32m"1em"[39m
+                      [33mstroke[39m=[32m"currentColor"[39m
+                      [33mstroke-width[39m=[32m"0"[39m
+                      [33mstyle[39m=[32m"margin-right: 2px;"[39m
+                      [33mviewBox[39m=[32m"0 0 24 24"[39m
+                      [33mwidth[39m=[32m"1em"[39m
+                      [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                    [36m>[39m
+                      [36m<path[39m
+                        [33md[39m=[32m"M10.78 19.03a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L5.81 11.5h14.44a.75.75 0 0 1 0 1.5H5.81l4.97 4.97a.75.75 0 0 1 0 1.06Z"[39m
+                      [36m/>[39m
+                    [36m</svg>[39m
+                    [36m<a[39m
+                      [33mclass[39m=[32m"nav-link"[39m
+                      [33mhref[39m=[32m"#"[39m
+                      [33mrole[39m=[32m"button"[39m
+                      [33mtabindex[39m=[32m"0"[39m
+                    [36m>[39m
+                      [0mBack[0m
+                    [36m</a>[39m
+                  [36m</button>[39m
+                [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
           [36m</nav>[39m
@@ -346,7 +368,7 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |      40 |    51.72 |   26.08 |      40 |                   
+All files                      |   38.59 |    53.12 |   26.08 |   38.59 |                   
  src                           |      40 |    42.85 |   16.66 |      40 |                   
   App.tsx                      |   63.15 |       60 |      25 |   63.15 | 15,23,32-43       
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
@@ -363,11 +385,11 @@ All files                      |      40 |    51.72 |   26.08 |      40 |
   DetailedPage.tsx             |       0 |      100 |       0 |       0 | 5                 
  src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
- src/Components/Navbar         |   36.36 |       60 |   14.28 |   36.36 |                   
-  Navbar.tsx                   |   36.36 |       60 |   14.28 |   36.36 | 14-15,19,25-37    
+ src/Components/Navbar         |   30.76 |    61.11 |   14.28 |   30.76 |                   
+  Navbar.tsx                   |   30.76 |    61.11 |   14.28 |   30.76 | 14-19,24,30-42    
 -------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.739 s
+Time:        2.699 s
 Ran all test suites.
