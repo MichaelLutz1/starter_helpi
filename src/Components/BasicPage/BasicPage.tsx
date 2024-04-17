@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 import Form from 'react-bootstrap/Form';
 import './BasicPage.css'
@@ -8,15 +8,20 @@ import './BasicPage.css'
 
 export function BasicPage() {
     const questions: string[] = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7"]
-    let eventKey = 0;
+    const [activeKey, setActiveKey] = useState<string | null>('0');
+
+    const handleQuestionClick = (eventKey: string) => {
+        setActiveKey(eventKey === activeKey ? null: eventKey);
+    }
+
     return (
         <div className='basic-page-container'>
             <h1 className='title'>Basic Quiz</h1>
             <div className='accordion-container'>
-                <Accordion defaultActiveKey="0" style={{ width: '50%', backgroundColor: '#21273b' }} >
-                    {questions.map((question: string) => (
-                        <Accordion.Item key={eventKey} eventKey={(eventKey++).toString()} className="item">
-                            <Accordion.Header className='header'>{question}</Accordion.Header>
+                <Accordion activeKey={activeKey} style={{ width: '50%', backgroundColor: '#21273b' }} >
+                    {questions.map((question: string, index: number) => (
+                        <Accordion.Item key={index} eventKey={index.toString()} className="item">
+                            <Accordion.Header className='header' onClick={() => handleQuestionClick(index.toString())}>{question}</Accordion.Header>
                             <Accordion.Body className='body'>
                                 <Form.Check
                                     label="Option 1"
