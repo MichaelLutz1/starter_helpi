@@ -2,11 +2,6 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-  console.log
-    null
-
-      at Object.<anonymous> (src/App.tsx:13:9)
-
   console.error
     Warning: The tag <text> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
         at text
@@ -25,7 +20,7 @@
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Container.js:14:3
         at nav
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Navbar.js:38:43
-        at Navbar2 (/home/runner/work/starter_helpi/starter_helpi/src/Components/Navbar/Navbar.tsx:10:27)
+        at Navbar2 (/home/runner/work/starter_helpi/starter_helpi/src/Components/Navbar/Navbar.tsx:9:27)
         at div
         at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:27:33)
 
@@ -59,7 +54,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (111 ms)
+  ✕ renders learn react link (114 ms)
 
   ● renders learn react link
 
@@ -104,7 +99,7 @@ FAIL src/App.test.tsx
                 [33mid[39m=[32m"basic-navbar-nav"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"d-flex flex-grow-1 align-items-center justify-content-center navbar-nav"[39m
+                  [33mclass[39m=[32m"d-flex flex-grow-1 align-items-left navbar-nav"[39m
                 [36m>[39m
                   [36m<a[39m
                     [33mclass[39m=[32m"nav-link"[39m
@@ -140,36 +135,29 @@ FAIL src/App.test.tsx
                   [36m</a>[39m
                 [36m</div>[39m
                 [36m<div[39m
-                  [33mclass[39m=[32m"ms-auto"[39m
+                  [33mclass[39m=[32m"ms-auto algin-items"[39m
                 [36m>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"disabled d-flex align-items-center navbar-back btn btn-primary"[39m
-                    [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [36m<svg[39m
-                      [33mfill[39m=[32m"currentColor"[39m
-                      [33mheight[39m=[32m"1em"[39m
-                      [33mstroke[39m=[32m"currentColor"[39m
-                      [33mstroke-width[39m=[32m"0"[39m
-                      [33mstyle[39m=[32m"margin-right: 2px;"[39m
-                      [33mviewBox[39m=[32m"0 0 24 24"[39m
-                      [33mwidth[39m=[32m"1em"[39m
-                      [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"btn btn-primary"[39m
+                      [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
+                      [33mtype[39m=[32m"button"[39m
                     [36m>[39m
-                      [36m<path[39m
-                        [33md[39m=[32m"M10.78 19.03a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06l6.25-6.25a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L5.81 11.5h14.44a.75.75 0 0 1 0 1.5H5.81l4.97 4.97a.75.75 0 0 1 0 1.06Z"[39m
-                      [36m/>[39m
-                    [36m</svg>[39m
-                    [36m<a[39m
-                      [33mclass[39m=[32m"nav-link"[39m
-                      [33mhref[39m=[32m"#"[39m
-                      [33mrole[39m=[32m"button"[39m
-                      [33mtabindex[39m=[32m"0"[39m
-                    [36m>[39m
-                      [0mBack[0m
-                    [36m</a>[39m
-                  [36m</button>[39m
+                      [36m<svg[39m
+                        [33mfill[39m=[32m"currentColor"[39m
+                        [33mheight[39m=[32m"1em"[39m
+                        [33mstroke[39m=[32m"currentColor"[39m
+                        [33mstroke-width[39m=[32m"0"[39m
+                        [33mviewBox[39m=[32m"0 0 16 16"[39m
+                        [33mwidth[39m=[32m"1em"[39m
+                        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+                      [36m>[39m
+                        [36m<path[39m
+                          [33md[39m=[32m"m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"[39m
+                        [36m/>[39m
+                      [36m</svg>[39m
+                    [36m</button>[39m
+                  [36m</div>[39m
                 [36m</div>[39m
               [36m</div>[39m
             [36m</div>[39m
@@ -253,7 +241,7 @@ FAIL src/App.test.tsx
             [36m</div>[39m
           [36m</div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"container"[39m
+            [33mclass[39m=[32m"container0"[39m
           [36m>[39m
             [36m<a[39m
               [33mhref[39m=[32m"https://github.com/MichaelLutz1/starter_helpi"[39m
@@ -368,28 +356,36 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   37.93 |    53.12 |      25 |   37.93 |                   
- src                           |      40 |    42.85 |   16.66 |      40 |                   
-  App.tsx                      |   63.15 |       60 |      25 |   63.15 | 15,23,32-43       
+All files                      |   29.29 |    39.02 |   19.51 |   29.16 |                   
+ src                           |   37.93 |    43.75 |   16.66 |   37.93 |                   
+  App.tsx                      |   61.11 |    58.33 |      25 |   61.11 | 15,23,32-43       
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts           |       0 |        0 |       0 |       0 | 3-10              
+ src/Components/AboutButton    |      50 |      100 |      50 |      50 |                   
+  AboutButton.tsx              |      50 |      100 |      50 |      50 | 9                 
+ src/Components/AboutPage      |       0 |      100 |       0 |       0 |                   
+  AboutPage.tsx                |       0 |      100 |       0 |       0 | 9                 
  src/Components/AppFooter      |      75 |      100 |      50 |      75 |                   
   AppFooter.tsx                |      75 |      100 |      50 |      75 | 11                
  src/Components/BasicButton    |      50 |      100 |      50 |      50 |                   
   BasicButtton.tsx             |      50 |      100 |      50 |      50 | 11                
- src/Components/BasicPage      |       0 |      100 |       0 |       0 |                   
-  BasicPage.tsx                |       0 |      100 |       0 |       0 | 10-18             
+ src/Components/BasicPage      |    6.25 |        0 |       0 |    6.25 |                   
+  BasicPage.tsx                |       0 |      100 |       0 |       0 | 12-35             
+  Rangeslider.tsx              |    12.5 |        0 |       0 |    12.5 | 13-45             
+ src/Components/CircleImages   |      20 |        0 |       0 |      20 |                   
+  CircleImage.tsx              |      20 |        0 |       0 |      20 | 5-11              
  src/Components/DetailedButton |      50 |      100 |      50 |      50 |                   
   DetailedButton.tsx           |      50 |      100 |      50 |      50 | 10                
- src/Components/DetailedPage   |       0 |      100 |       0 |       0 |                   
-  DetailedPage.tsx             |       0 |      100 |       0 |       0 | 5                 
+ src/Components/DetailedPage   |   23.33 |       25 |   11.11 |   22.22 |                   
+  AnswerBox.tsx                |      20 |      100 |       0 |      20 | 10-16             
+  DetailedPage.tsx             |      24 |       25 |   14.28 |   22.72 | 15-55             
  src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
- src/Components/Navbar         |   30.76 |    61.11 |   14.28 |   30.76 |                   
-  Navbar.tsx                   |   30.76 |    61.11 |   14.28 |   30.76 | 14-19,24,30-42    
+ src/Components/Navbar         |   28.57 |    66.66 |   16.66 |   28.57 |                   
+  Navbar.tsx                   |   28.57 |    66.66 |   16.66 |   28.57 | 12,18-30          
 -------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.726 s
+Time:        2.854 s
 Ran all test suites.
