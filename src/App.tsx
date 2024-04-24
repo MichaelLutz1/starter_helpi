@@ -5,12 +5,12 @@ import { HomeScreen } from './Components/HomeScreen/HomeScreen';
 import AppFooter from './Components/AppFooter/AppFooter';
 import { BasicPage } from './Components/BasicPage/BasicPage';
 import { DetailedPage } from './Components/DetailedPage/DetailedPage';
+import { AboutPage } from './Components/AboutPage/AboutPage'
 
 
 let pageData = "Home";
 const savePageKey = "MYPAGE";
-const currPage = localStorage.getItem(savePageKey);
-console.log(currPage);
+const currPage = sessionStorage.getItem(savePageKey);
 if (currPage !== null) {
   pageData = currPage;
 }
@@ -39,7 +39,7 @@ function App() {
   }
 
   function changePage(newPage: string) {
-    localStorage.setItem(savePageKey, newPage);
+    sessionStorage.setItem(savePageKey, newPage);
     setPage(newPage);
   }
   return (
@@ -49,6 +49,7 @@ function App() {
       {page === "Home" && <HomeScreen page={page} setPage={changePage}/>}
       {page === "Basic" && <BasicPage/>}
       {page === "Detailed" && <DetailedPage/>}
+      {page === "About" && <AboutPage/>}
       <AppFooter changeKey={changeKey} handleSubmit={handleSubmit}/>
     </div>
   );

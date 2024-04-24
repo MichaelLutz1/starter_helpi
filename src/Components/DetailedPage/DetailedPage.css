@@ -1,0 +1,25 @@
+.page-container {
+	width: 100%;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.question-card {
+	width: 80%;
+	height: 80%;
+	margin: 20px;
+}
+
+.card-header {
+	color: white;
+}
+
+
+.carousel-indicators .active {
+	background-color: var(--purple) !important;
+}
+

@@ -1,0 +1,18 @@
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border: 8px solid white;
+  }
+  
+.circle img {
+    width: 100%; /* Ensure the image fills the circular container */
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio and cover the container */
+}
+  
+.circle.hovered {
+    transform: scale(1.1) !important;
+}

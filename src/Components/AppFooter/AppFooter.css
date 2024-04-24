@@ -1,4 +1,4 @@
-.container {
+.container0 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -7,14 +7,13 @@
 }
 
 .names-container {
-	border: 1px solid #6923ff;
+	border: 1px solid var(--purple);
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
 	color: white;
 }
 
 .gh-profile {
-	/* color: #6923ff; */
 	color: white;
 	text-decoration: none;
 }

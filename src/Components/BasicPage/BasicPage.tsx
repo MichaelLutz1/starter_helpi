@@ -1,43 +1,41 @@
 import React, { useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion';
-import Form from 'react-bootstrap/Form';
 import './BasicPage.css'
+import RangeSlider from "./Rangeslider";
+
 
 
 
 
 export function BasicPage() {
-    const questions: string[] = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7"]
-    const [activeKey, setActiveKey] = useState<string | null>('0');
 
-    const handleQuestionClick = (eventKey: string) => {
-        setActiveKey(eventKey === activeKey ? null: eventKey);
+    const [, setRangeSliderValue] = useState("3")
+  
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setRangeSliderValue(event.target.value)
     }
 
+    const questions: string[] = 
+    [
+    "1. I enjoy solving complex problems:",
+    "2. I prefer working in a team rather than alone: ", 
+    "3. I am comfortable with public speaking and presenting ideas to others:", 
+    "4. I find it fulfilling to help others and make a positive impact on their lives:",
+    "5. I am interested in technology and staying updated with the latest trends:",
+    "6. I prefer a job that allows for a flexible schedule and the possibility of remote work:",
+    "7. I am more creative than analytical:"
+    ]
+    let eventKey = 0;
     return (
         <div className='basic-page-container'>
             <h1 className='title'>Basic Quiz</h1>
             <div className='accordion-container'>
-                <Accordion activeKey={activeKey} style={{ width: '50%', backgroundColor: '#21273b' }} >
-                    {questions.map((question: string, index: number) => (
-                        <Accordion.Item key={index} eventKey={index.toString()} className="item">
-                            <Accordion.Header className='header' onClick={() => handleQuestionClick(index.toString())}>{question}</Accordion.Header>
+                <Accordion defaultActiveKey={questions.map((_, i) => i.toString())} style={{ width: '50%', backgroundColor: '#21273b' }} alwaysOpen>
+                    {questions.map((question: string) => (
+                        <Accordion.Item key={eventKey} eventKey={(eventKey++).toString()} className="item">
+                            <Accordion.Header className='header'>{question}</Accordion.Header>
                             <Accordion.Body className='body'>
-                                <Form.Check
-                                    label="Option 1"
-                                    name="group1"
-                                    type='radio'
-                                />
-                                <Form.Check
-                                    label="Option 2"
-                                    name="group1"
-                                    type='radio'
-                                />
-                                <Form.Check
-                                    label="Option 3"
-                                    name="group1"
-                                    type='radio'
-                                />
+                                <RangeSlider handleChange={handleChange}/>
                             </Accordion.Body>
                         </Accordion.Item>
                     )

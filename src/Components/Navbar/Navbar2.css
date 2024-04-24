@@ -3,16 +3,12 @@
     align-items: center;
 }
 
-.gradient-custom {
-    background: #0e1014;
-}
-
 .navbar-selected {
     text-decoration: underline;
 }
 
 .navbar-back {
-    color: #ffffff;
+    color: rgba(105, 35, 255, 0.5);
     margin-left: 1px;
     padding-left: 2%;
     padding-right: 7%;
@@ -20,6 +16,11 @@
     border: 10px;
     background: #6923ff;
     border-radius: 10px;
+    opacity: 90%;
+}
+
+.navbar-transparent-back {
+    background-color: rgba(105, 35, 255, 0)
 }
 
 .logo-img {
@@ -32,4 +33,10 @@
 
 .mx-auto .nav-link:hover {
     color: white;
-  }
+}
+
+.disabled-navbar .nav-link,
+.disabled-navbar .navbar-back {
+  pointer-events: none;
+  opacity: 0.5;
+}

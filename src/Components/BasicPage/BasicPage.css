@@ -3,21 +3,28 @@
 	flex-direction: column;
 	align-items: center;
 }
-.item, .header, .body {
-	--bs-accordion-btn-bg: #21273b;
-	--bs-accordion-bg: #21273b;
+.item,
+.header,
+.body {
+	--bs-accordion-btn-bg: var(--light-bg);
+	--bs-accordion-bg: var(--light-bg);
 	--bs-accordion-border-color: #343a40;
 	--bs-accordion-btn-color: white;
-	--bs-accordion-active-bg: #21273b;
-	--bs-accordion-active-color: #6923ff;
+	--bs-accordion-active-bg: var(--light-bg);
+	--bs-accordion-active-color: var(--purple);
 	--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(105, 35, 255, 0.25);
 	--bs-accordion-color: white;
 	--bs-accordion-icon-color: white;
 }
-.title{
+
+.title {
 	margin-bottom: 4rem;
 	color: white;
 }
 .body{
-	text-align: left;
+	text-align: center;
+}
+.accordion-button {
+    font-size: 18px; 
+    font-weight: bold; 
 }
