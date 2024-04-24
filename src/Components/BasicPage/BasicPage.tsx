@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 import './BasicPage.css'
 import RangeSlider from "./Rangeslider";
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 
 
@@ -29,6 +30,9 @@ export function BasicPage() {
     return (
         <div className='basic-page-container'>
             <h1 className='title'>Basic Quiz</h1>
+            <div className='basicProgressBar-container'>
+                <ProgressBar now={50}> </ProgressBar>
+            </div>
             <div className='accordion-container'>
                 <Accordion defaultActiveKey={questions.map((_, i) => i.toString())} style={{ width: '50%', backgroundColor: '#21273b' }} alwaysOpen>
                     {questions.map((question: string) => (
