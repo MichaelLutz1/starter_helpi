@@ -54,7 +54,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (116 ms)
+  ✕ renders learn react link (110 ms)
 
   ● renders learn react link
 
@@ -356,7 +356,7 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   26.08 |    39.02 |   16.66 |   26.12 |                   
+All files                      |   29.77 |    39.53 |   18.75 |   29.36 |                   
  src                           |   37.93 |    43.75 |   16.66 |   37.93 |                   
   App.tsx                      |   61.11 |    58.33 |      25 |   61.11 | 15,23,32-43       
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
@@ -369,9 +369,9 @@ All files                      |   26.08 |    39.02 |   16.66 |   26.12 |
   AppFooter.tsx                |      75 |      100 |      50 |      75 | 11                
  src/Components/BasicButton    |      50 |      100 |      50 |      50 |                   
   BasicButtton.tsx             |      50 |      100 |      50 |      50 | 11                
- src/Components/BasicPage      |    6.25 |        0 |       0 |    6.25 |                   
-  BasicPage.tsx                |       0 |      100 |       0 |       0 | 12-35             
-  Rangeslider.tsx              |    12.5 |        0 |       0 |    12.5 | 13-45             
+ src/Components/BasicPage      |   31.25 |    11.11 |   14.28 |   29.03 |                   
+  BasicPage.tsx                |      36 |       50 |      20 |   33.33 | 38,60-83          
+  Rangeslider.tsx              |   14.28 |        0 |       0 |   14.28 | 12-32             
  src/Components/CircleImages   |      20 |        0 |       0 |      20 |                   
   CircleImage.tsx              |      20 |        0 |       0 |      20 | 5-11              
  src/Components/DetailedButton |      50 |      100 |      50 |      50 |                   
@@ -388,5 +388,5 @@ All files                      |   26.08 |    39.02 |   16.66 |   26.12 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.789 s
+Time:        2.763 s
 Ran all test suites.
