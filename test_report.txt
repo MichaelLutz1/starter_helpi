@@ -305,7 +305,7 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   29.77 |    39.53 |   18.75 |   29.36 |                   
+All files                      |   28.26 |    39.53 |    17.3 |   28.46 |                   
  src                           |   37.93 |    43.75 |   16.66 |   37.93 |                   
   App.tsx                      |   61.11 |    58.33 |      25 |   61.11 | 15,23,32-43       
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
@@ -318,8 +318,8 @@ All files                      |   29.77 |    39.53 |   18.75 |   29.36 |
   AppFooter.tsx                |      75 |      100 |      50 |      75 | 11                
  src/Components/BasicButton    |      50 |      100 |      50 |      50 |                   
   BasicButtton.tsx             |      50 |      100 |      50 |      50 | 11                
- src/Components/BasicPage      |   31.25 |    11.11 |   14.28 |   29.03 |                   
-  BasicPage.tsx                |      36 |       50 |      20 |   33.33 | 38,60-83          
+ src/Components/BasicPage      |   25.64 |    11.11 |    9.09 |   25.71 |                   
+  BasicPage.tsx                |   28.12 |       50 |   11.11 |   28.57 | 39,61-92          
   Rangeslider.tsx              |   14.28 |        0 |       0 |   14.28 | 12-32             
  src/Components/CircleImages   |      20 |        0 |       0 |      20 |                   
   CircleImage.tsx              |      20 |        0 |       0 |      20 | 5-11              
@@ -337,5 +337,5 @@ All files                      |   29.77 |    39.53 |   18.75 |   29.36 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.782 s
+Time:        2.799 s
 Ran all test suites.
