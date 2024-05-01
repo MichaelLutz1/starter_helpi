@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (72 ms)
+  ✕ renders learn react link (71 ms)
 
   ● renders learn react link
 
@@ -305,9 +305,9 @@ FAIL src/App.test.tsx
 -------------------------------|---------|----------|---------|---------|-------------------
 File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------------|---------|----------|---------|---------|-------------------
-All files                      |   28.26 |    39.53 |    17.3 |   28.46 |                   
- src                           |   37.93 |    43.75 |   16.66 |   37.93 |                   
-  App.tsx                      |   61.11 |    58.33 |      25 |   61.11 | 15,23,32-43       
+All files                      |   27.85 |       40 |   16.66 |   28.03 |                   
+ src                           |   37.93 |    44.44 |   16.66 |   37.93 |                   
+  App.tsx                      |   61.11 |    57.14 |      25 |   61.11 | 16,24,33-44       
   index.tsx                    |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts           |       0 |        0 |       0 |       0 | 3-10              
  src/Components/AboutButton    |      50 |      100 |      50 |      50 |                   
@@ -325,17 +325,19 @@ All files                      |   28.26 |    39.53 |    17.3 |   28.46 |
   CircleImage.tsx              |      20 |        0 |       0 |      20 | 5-11              
  src/Components/DetailedButton |      50 |      100 |      50 |      50 |                   
   DetailedButton.tsx           |      50 |      100 |      50 |      50 | 10                
- src/Components/DetailedPage   |   17.39 |       25 |    6.25 |   16.66 |                   
+ src/Components/DetailedPage   |   17.02 |       25 |    5.88 |   16.27 |                   
   AnswerBox.tsx                |      20 |      100 |       0 |      20 | 10-16             
   DetailedPage.tsx             |   19.35 |       25 |   11.11 |   18.51 | 25-75             
-  SubmitButton.tsx             |      10 |      100 |       0 |      10 | 6-25              
+  SubmitButton.tsx             |    9.09 |      100 |       0 |    9.09 | 6-25              
  src/Components/HomeScreen     |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx               |     100 |      100 |     100 |     100 |                   
  src/Components/Navbar         |   28.57 |    66.66 |   16.66 |   28.57 |                   
   Navbar.tsx                   |   28.57 |    66.66 |   16.66 |   28.57 | 12,18-30          
+ src/Components/ResultsPage    |       0 |      100 |       0 |       0 |                   
+  ResultsPage.tsx              |       0 |      100 |       0 |       0 | 4                 
 -------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.102 s
+Time:        3.174 s
 Ran all test suites.
