@@ -8,14 +8,23 @@ interface QuestionData {
     answer: string;
   }  
 
+interface Careers {
+  career: string;
+  reasons: string[];
+  steps: string[];
+}
+
 export function ResultsPage({APIKey, basicQuestionData, detailQuestionData} : {APIKey: string,basicQuestionData: QuestionData[], detailQuestionData: QuestionData[]}) {
   const [loading, setLoading] = React.useState(false);
-  const [content, setContent] = React.useState("");
+  const [content, setContent] = React.useState<Careers[]>([]);
+
+  console.log(content)
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const responseContent = await main();
-      setContent(JSON.stringify(responseContent));
+      const responseContent = await main() ?? "";
+      setContent(JSON.parse(responseContent));
       setLoading(false)
     };
 
@@ -54,13 +63,14 @@ export function ResultsPage({APIKey, basicQuestionData, detailQuestionData} : {A
           messages: [
             { 
               role: "system", 
-              content: "You are a career selection assistant. Help the user find the best job based on their preferences and skills." },
+              content: "You are a career selection assistant. Help the user find the best job based on their preferences and skills. Return the results in a JSON object." },
             {
               role: "user",
               content: pickPrompt(basicQuestionData, detailQuestionData)
             }
           ],
           model: "gpt-4-turbo",
+          response_format: { type: "json_object"},
         });
 
         console.log(completion.choices[0].message.content);
@@ -70,9 +80,26 @@ export function ResultsPage({APIKey, basicQuestionData, detailQuestionData} : {A
 
     return (
       <div className = "resultsContainer">
-        <h1>ResultsPage</h1>
         <div> {loading && <LoadingAnimation/>} </div>
-        <p> {!(loading) && content} </p>
+        <p> {!(loading) && 
+          content.map((choice, index) => (
+            <div key={index}>
+              <h2>{choice.career}</h2>
+              <h3>Reasons:</h3>
+              <ul>
+                {choice.reasons.map((reason, idx) => (
+                  <li key={idx}>{reason}</li>
+                ))}
+              </ul>
+              <h3>Steps to Reach:</h3>
+              <ul>
+                {choice.steps.map((step, idx) => (
+                    <li key={idx}>{step}</li>
+                  ))}
+              </ul>
+            </div>
+          ))
+        } </p>
         </div>
     )
 }
