@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (81 ms)
+  ✕ renders learn react link (71 ms)
 
   ● renders learn react link
 
@@ -315,7 +315,7 @@ FAIL src/App.test.tsx
 ---------------------------------|---------|----------|---------|---------|-------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------------|---------|----------|---------|---------|-------------------
-All files                        |    25.3 |    38.18 |   14.51 |   25.31 |                   
+All files                        |    24.3 |     32.3 |   14.28 |   24.27 |                   
  src                             |   55.55 |    45.45 |    37.5 |   53.48 |                   
   App.tsx                        |   73.52 |    55.55 |      50 |   71.87 | 21,29,47,64,75-86 
   index.tsx                      |       0 |      100 |     100 |       0 | 8-20              
@@ -326,30 +326,30 @@ All files                        |    25.3 |    38.18 |   14.51 |   25.31 |
   AboutPage.tsx                  |       0 |      100 |       0 |       0 | 12                
  src/Components/AppFooter        |      75 |      100 |      50 |      75 |                   
   AppFooter.tsx                  |      75 |      100 |      50 |      75 | 11                
- src/Components/BasicButton      |      50 |      100 |      50 |      50 |                   
-  BasicButtton.tsx               |      50 |      100 |      50 |      50 | 11                
+ src/Components/BasicButton      |   33.33 |        0 |      50 |   33.33 |                   
+  BasicButtton.tsx               |   33.33 |        0 |      50 |   33.33 | 10-14             
  src/Components/BasicPage        |   15.62 |        0 |       0 |   17.24 |                   
   BasicPage.tsx                  |      16 |      100 |       0 |   18.18 | 56-88             
   Rangeslider.tsx                |   14.28 |        0 |       0 |   14.28 | 12-32             
  src/Components/CircleImages     |      20 |        0 |       0 |      20 |                   
   CircleImage.tsx                |      20 |        0 |       0 |      20 | 5-11              
- src/Components/DetailedButton   |      50 |      100 |      50 |      50 |                   
-  DetailedButton.tsx             |      50 |      100 |      50 |      50 | 10                
- src/Components/DetailedPage     |    5.12 |        0 |       0 |    5.55 |                   
+ src/Components/DetailedButton   |   33.33 |        0 |      50 |   33.33 |                   
+  DetailedButton.tsx             |   33.33 |        0 |      50 |   33.33 | 9-13              
+ src/Components/DetailedPage     |       5 |        0 |       0 |     5.4 |                   
   AnswerBox.tsx                  |      20 |      100 |       0 |      20 | 10-16             
-  DetailedPage.tsx               |       0 |        0 |       0 |       0 | 15-61             
+  DetailedPage.tsx               |       0 |        0 |       0 |       0 | 15-62             
   SubmitButton.tsx               |    9.09 |      100 |       0 |    9.09 | 6-25              
  src/Components/HomeScreen       |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx                 |     100 |      100 |     100 |     100 |                   
  src/Components/LoadingAnimation |       0 |      100 |       0 |       0 |                   
   LoadingAnimation.tsx           |       0 |      100 |       0 |       0 | 5                 
- src/Components/Navbar           |      25 |    68.75 |   14.28 |      25 |                   
-  Navbar.tsx                     |      25 |    68.75 |   14.28 |      25 | 12,18-33          
+ src/Components/Navbar           |   18.18 |       55 |   14.28 |   18.18 |                   
+  Navbar.tsx                     |   18.18 |       55 |   14.28 |   18.18 | 12-16,22-37       
  src/Components/ResultsPage      |       0 |        0 |       0 |       0 |                   
-  ResultsPage.tsx                |       0 |        0 |       0 |       0 | 12-71             
+  ResultsPage.tsx                |       0 |        0 |       0 |       0 | 13-84             
 ---------------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.183 s
+Time:        2.841 s
 Ran all test suites.
