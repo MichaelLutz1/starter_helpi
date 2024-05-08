@@ -6,9 +6,13 @@ import logo from './FinalLogo.png'
 import '../Navbar/Navbar2.css'
 import AboutButton from '../AboutButton/AboutButton'
 
-export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: string) => void }) {
+export function Navbar2({ apiKey, page, setPage }: { apiKey: string; page: string; setPage: (newPage: string) => void }) {
 
   const handleNavClick = (newPage: string) => {
+    if (apiKey === '' && newPage !== "Home") {
+      alert("Please enter an API key in the Home page before taking the quiz.");
+      return;
+    }
     setPage(newPage);
   }
 
@@ -19,8 +23,8 @@ export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: st
           <img src={logo} alt='logo' className="logo-img" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav'/>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="d-flex flex-grow-1 align-items-left">
+        <Navbar.Collapse id="basic-navbar-nav" className='navbar-collapse'>
+          <Nav className="d-flex flex-grow-1 align-items-left me-auto">
             <Nav.Link onClick={() => handleNavClick("Home")}>
               {(page === "Home" && (<div className='navbar-selected'>Home</div>)) || (page !== "Home" && (<div>Home</div>))}
             </Nav.Link>
@@ -29,6 +33,9 @@ export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: st
             </Nav.Link>
             <Nav.Link onClick={() => handleNavClick("Detailed")}>
               {(page === "Detailed" && (<div className='navbar-selected'>Detailed</div>)) || (page !== "Detailed" && (<div>Detailed</div>))}
+            </Nav.Link>
+            <Nav.Link onClick={() => handleNavClick("Results")}>
+              {(page === "Results" && (<div className='navbar-selected'>Results</div>)) || (page !== "Results" && (<div>Results</div>))}
             </Nav.Link>
           </Nav>
           <div className='ms-auto algin-items'>

@@ -5,31 +5,31 @@ import RangeSlider from "./Rangeslider";
 import SubmitButton from '../DetailedPage/SubmitButton';
 import { ProgressBar } from 'react-bootstrap';
 
-interface QuestionData{
-    question:string;
+interface QuestionData {
+    question: string;
     answer: string;
 }
 
 const index: Record<string, number> = {
-    "1. I enjoy solving complex problems:" : 0,
+    "1. I enjoy solving complex problems:": 0,
     "2. I prefer working in a team rather than alone: ": 1,
     "3. I am comfortable with public speaking and presenting ideas to others:": 2,
-    "4. I find it fulfilling to help others and make a positive impact on their lives:" : 3,
+    "4. I find it fulfilling to help others and make a positive impact on their lives:": 3,
     "5. I am interested in technology and staying updated with the latest trends:": 4,
     "6. I prefer a job that allows for a flexible schedule and the possibility of remote work:": 5,
     "7. I am more creative than analytical:": 6
 }
 
 
-const questions: string[] = 
+const questions: string[] =
     [
-    "1. I enjoy solving complex problems:",
-    "2. I prefer working in a team rather than alone: ", 
-    "3. I am comfortable with public speaking and presenting ideas to others:", 
-    "4. I find it fulfilling to help others and make a positive impact on their lives:",
-    "5. I am interested in technology and staying updated with the latest trends:",
-    "6. I prefer a job that allows for a flexible schedule and the possibility of remote work:",
-    "7. I am more creative than analytical:"
+        "1. I enjoy solving complex problems:",
+        "2. I prefer working in a team rather than alone: ",
+        "3. I am comfortable with public speaking and presenting ideas to others:",
+        "4. I find it fulfilling to help others and make a positive impact on their lives:",
+        "5. I am interested in technology and staying updated with the latest trends:",
+        "6. I prefer a job that allows for a flexible schedule and the possibility of remote work:",
+        "7. I am more creative than analytical:"
     ]
 
 
@@ -40,9 +40,9 @@ const rangeValues: Record<string, string> = {
     3: "Neither Agree nor Disagree",
     4: "Somewhat Agree",
     5: "Agree"
-  };
+};
 
-const reverseMap: Record<string, string>= { 
+const reverseMap: Record<string, string> = {
     "Disagree": "1",
     "Somewhat Disagree": "2",
     "Neither Agree nor Disagree": "3",
@@ -58,11 +58,11 @@ export function BasicPage({ setBasicDataKey, basicQuestionData, setBasicQuestion
     const handleSliderChange = (question: string, resp: string) => {
         const newAnswer = rangeValues[resp]
         let data = [...basicQuestionData];
-        data[index[question]] = { question: question, answer: newAnswer};
+        data[index[question]] = { question: question, answer: newAnswer };
         setBasicQuestionData(data);
         // Check if all questions have been answered
         setIsFinished(data.every((question) => question.answer.length > 0));
-            // Save data to local storage
+        // Save data to local storage
         sessionStorage.setItem(setBasicDataKey, JSON.stringify(data));
         console.log(data)
     };
@@ -80,18 +80,18 @@ export function BasicPage({ setBasicDataKey, basicQuestionData, setBasicQuestion
         <div className='basic-page-container'>
             <div className='basic-heading-container'>
                 <h1 className='title'>Basic Quiz</h1>
-                <ProgressBar style={{width: '50vw'}}className='custom-progress-bar' min={0} max={100} now={progressPercentage} animated striped />
+                <ProgressBar style={{ width: '30vw' }} className='custom-progress-bar' min={0} max={100} now={progressPercentage} animated striped />
             </div>
             <div className='accordion-container'>
                 <Accordion defaultActiveKey={questions.map((_, i) => i.toString())} style={{ width: '50%', backgroundColor: '#21273b' }} alwaysOpen>
                     {questions.map((question: string) => (
                         <Accordion.Item key={eventKey} eventKey={(eventKey++).toString()} className="item">
                             <Accordion.Header className='header'>{question}</Accordion.Header>
-                            <Accordion.Body className='body'>  
-                                <RangeSlider 
-                                    question={question} 
+                            <Accordion.Body className='body'>
+                                <RangeSlider
+                                    question={question}
                                     handleChange={handleSliderChange}
-                                    rangeValues={rangeValues} 
+                                    rangeValues={rangeValues}
                                     key={question}
                                     numresp={reverseMap[basicQuestionData[index[question]].answer]}
                                 />
@@ -100,7 +100,9 @@ export function BasicPage({ setBasicDataKey, basicQuestionData, setBasicQuestion
                     )
                     )}
                 </Accordion>
-                <SubmitButton page={page} setPage={setPage} isFinished={isFinished} />
+                <div style={{ marginTop: '2rem' }}>
+                    <SubmitButton page={page} setPage={setPage} isFinished={isFinished} />
+                </div>
             </div>
         </div>
     )
