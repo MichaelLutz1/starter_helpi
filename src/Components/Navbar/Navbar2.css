@@ -23,6 +23,20 @@
     background-color: rgba(105, 35, 255, 0)
 }
 
+.navbar-collapse {
+    background-color: rgb(33, 39, 59);
+}
+
+.navbar-collapse.show {
+    top: 4rem;
+    left: .25rem;
+    margin-top: 10px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: .5rem;
+    border-radius: .25rem;
+}
+
 .logo-img {
     width: 140px;
     height: auto;
@@ -31,12 +45,6 @@
     border: 20px;
 }
 
-.mx-auto .nav-link:hover {
+.navbar-collapse .nav-link:hover {
     color: white;
-}
-
-.disabled-navbar .nav-link,
-.disabled-navbar .navbar-back {
-  pointer-events: none;
-  opacity: 0.5;
 }

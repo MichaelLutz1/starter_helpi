@@ -22,9 +22,9 @@ export function Navbar2({ apiKey, page, setPage }: { apiKey: string; page: strin
         <Navbar.Brand onClick={() => handleNavClick("Home")} href="#home" className='brand-logo'>
           <img src={logo} alt='logo' className="logo-img" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="d-flex flex-grow-1 align-items-left">
+        <Navbar.Toggle aria-controls='basic-navbar-nav'/>
+        <Navbar.Collapse id="basic-navbar-nav" className='navbar-collapse'>
+          <Nav className="d-flex flex-grow-1 align-items-left me-auto">
             <Nav.Link onClick={() => handleNavClick("Home")}>
               {(page === "Home" && (<div className='navbar-selected'>Home</div>)) || (page !== "Home" && (<div>Home</div>))}
             </Nav.Link>
@@ -33,6 +33,9 @@ export function Navbar2({ apiKey, page, setPage }: { apiKey: string; page: strin
             </Nav.Link>
             <Nav.Link onClick={() => handleNavClick("Detailed")}>
               {(page === "Detailed" && (<div className='navbar-selected'>Detailed</div>)) || (page !== "Detailed" && (<div>Detailed</div>))}
+            </Nav.Link>
+            <Nav.Link onClick={() => handleNavClick("Results")}>
+              {(page === "Results" && (<div className='navbar-selected'>Detailed</div>)) || (page !== "Results" && (<div>Results</div>))}
             </Nav.Link>
           </Nav>
           <div className='ms-auto algin-items'>
