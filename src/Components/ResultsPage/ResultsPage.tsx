@@ -9,7 +9,7 @@ interface QuestionData {
   answer: string;
 }
 
-export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, setPage }: { APIKey: string, basicQuestionData: QuestionData[], detailQuestionData: QuestionData[], setPage: (newPage: string) => void }) {
+export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, setPage }: { APIKey: string, basicQuestionData: QuestionData[], detailQuestionData: QuestionData[], setPage: (newPage: string) => void }): JSX.Element {
   const [error, setError] = React.useState<boolean>(false);
   const [loading, setLoading] = React.useState(false);
   const [content, setContent] = React.useState("");
@@ -72,43 +72,25 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
     catch (error) {
       setError(true);
     }
-
-    async function main() {
-      const completion = await client.chat.completions.create({
-        messages: [
-          {
-            role: "system",
-            content: "You are a career selection assistant. Help the user find the best job based on their preferences and skills."
-          },
-          {
-            role: "user",
-            content: pickPrompt(basicQuestionData, detailQuestionData)
-          }
-        ],
-        model: "gpt-4-turbo",
-      });
-
-      console.log(completion.choices[0].message.content);
-      return completion.choices[0].message.content;
-    }
-
-
-    return (
-      <div className="resultsContainer">
-        <div>
-          {error ? <div>
-            <h1>There was an error processing your response. Try resubmitting your api key</h1>
-            <Button onClick={() => setPage('Home')}>Return to Home</Button>
-
-          </div> :
-            <>
-              <h1>ResultsPage</h1>
-              <div> {loading && <LoadingAnimation />} </div>
-              <p> {!(loading) && content} </p>
-            </>
-          }
-        </div>
-      </div>
-    )
   }
+
+
+
+  return (
+    <div className="resultsContainer">
+      <div>
+        {error ? <div>
+          <h1>There was an error processing your response. Try resubmitting your api key</h1>
+          <Button onClick={() => setPage('Home')}>Return to Home</Button>
+
+        </div> :
+          <>
+            <h1>ResultsPage</h1>
+            <div> {loading && <LoadingAnimation />} </div>
+            <p> {!(loading) && content} </p>
+          </>
+        }
+      </div>
+    </div>
+  )
 }
