@@ -6,9 +6,13 @@ import logo from './FinalLogo.png'
 import '../Navbar/Navbar2.css'
 import AboutButton from '../AboutButton/AboutButton'
 
-export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: string) => void }) {
+export function Navbar2({ apiKey, page, setPage }: { apiKey: string; page: string; setPage: (newPage: string) => void }) {
 
   const handleNavClick = (newPage: string) => {
+    if (apiKey === '' && newPage !== "Home") {
+      alert("Please enter an API key in the Home page before taking the quiz.");
+      return;
+    }
     setPage(newPage);
   }
 
