@@ -6,9 +6,13 @@ import logo from './FinalLogo.png'
 import '../Navbar/Navbar2.css'
 import AboutButton from '../AboutButton/AboutButton'
 
-export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: string) => void }) {
+export function Navbar2({ apiKey, page, setPage }: { apiKey: string; page: string; setPage: (newPage: string) => void }) {
 
   const handleNavClick = (newPage: string) => {
+    if (apiKey === '' && newPage !== "Home") {
+      alert("Please enter an API key in the Home page before taking the quiz.");
+      return;
+    }
     setPage(newPage);
   }
 
@@ -18,7 +22,7 @@ export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: st
         <Navbar.Brand onClick={() => handleNavClick("Home")} href="#home" className='brand-logo'>
           <img src={logo} alt='logo' className="logo-img" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls='basic-navbar-nav'/>
+        <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="d-flex flex-grow-1 align-items-left">
             <Nav.Link onClick={() => handleNavClick("Home")}>
