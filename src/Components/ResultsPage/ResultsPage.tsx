@@ -7,7 +7,6 @@ interface QuestionData {
     question: string;
     answer: string;
   }  
-
 interface Careers {
   career: string;
   reasons: string[];
@@ -18,13 +17,12 @@ export function ResultsPage({APIKey, basicQuestionData, detailQuestionData} : {A
   const [loading, setLoading] = React.useState(false);
   const [content, setContent] = React.useState<Careers[]>([]);
 
-  console.log(content)
-
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const responseContent = await main() ?? "";
-      setContent(JSON.parse(responseContent));
+      const responseContent = JSON.parse((await main() ?? ""));
+      console.log(responseContent.career_choices)
+      setContent(responseContent.career_choices);
       setLoading(false)
     };
 
@@ -73,7 +71,6 @@ export function ResultsPage({APIKey, basicQuestionData, detailQuestionData} : {A
           response_format: { type: "json_object"},
         });
 
-        console.log(completion.choices[0].message.content);
         return completion.choices[0].message.content;
       }
 
