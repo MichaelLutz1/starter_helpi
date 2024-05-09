@@ -1,5 +1,11 @@
 .resultsContainer {
-    color: #ffffff
+    color: #0e1014;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .text-blurple {
@@ -9,4 +15,15 @@
 .loading-text {
     color: white;
     font-size: larger;    
+}
+
+.Result-Card {
+    color: #0e1014;
+    background-color: #21273b;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.results-body {
+    text-align: left;
 }
