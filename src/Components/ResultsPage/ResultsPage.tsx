@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import OpenAI from "openai";
 import './ResultsPage.css'
+import { Button } from 'react-bootstrap';
 import { LoadingAnimation } from '../LoadingAnimation/LoadingAnimation'
 
 interface QuestionData {
@@ -13,7 +14,8 @@ interface Careers {
   steps: string[];
 }
 
-export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData }: { APIKey: string, basicQuestionData: QuestionData[], detailQuestionData: QuestionData[] }) {
+export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, setPage }: { APIKey: string, basicQuestionData: QuestionData[], detailQuestionData: QuestionData[], setPage: (page: string) => void }) {
+  const [error, setError] = React.useState<boolean>(false);
   const [loading, setLoading] = React.useState(false);
   const [content, setContent] = React.useState<Careers[] | null>(null);
 
@@ -21,6 +23,10 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData }: {
     const fetchData = async () => {
       setLoading(true);
       const responseContent = await main() ?? '';
+      if (responseContent === '') {
+        setError(true);
+        return;
+      }
       const responseCareers = JSON.parse(responseContent);
       setContent(responseCareers.careers);
       setLoading(false)
@@ -65,30 +71,35 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData }: {
   }
 
   async function main() {
-    const completion = await client.chat.completions.create({
-      messages: [
-        {
-          role: "system",
-          content: "You are a career selection assistant. Help the user find the best job based on their preferences and skills. Return the results in a JSON object."
-        },
-        {
-          role: "user",
-          content: pickPrompt(basicQuestionData, detailQuestionData)
-        }
-      ],
-      model: "gpt-4-turbo",
-      response_format: { type: "json_object" },
-    });
-
-    return completion.choices[0].message.content;
+    try {
+      const completion = await client.chat.completions.create({
+        messages: [
+          {
+            role: "system",
+            content: "You are a career selection assistant. Help the user find the best job based on their preferences and skills. Return the results in a JSON object."
+          },
+          {
+            role: "user",
+            content: pickPrompt(basicQuestionData, detailQuestionData)
+          }
+        ],
+        model: "gpt-4-turbo",
+        response_format: { type: "json_object" },
+      })
+      return completion.choices[0].message.content;
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+      setError(true);
+    }
   }
-
 
   return (
     <div className="resultsContainer">
-      <div> {loading ? <LoadingAnimation /> : content === null ? <div>
+      <div> {loading ? <LoadingAnimation /> : content === null || error ? <div>
         <h1>Sorry, no results found.</h1>
         <p>Please try again with different answers.</p>
+        <Button onClick={() => setPage('Home')}>Return to Home</Button>
       </div> :
         content.map((choice, index) => (
           <div key={index}>

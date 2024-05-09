@@ -6,9 +6,13 @@ import logo from './FinalLogo.png'
 import '../Navbar/Navbar2.css'
 import AboutButton from '../AboutButton/AboutButton'
 
-export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: string) => void }) {
+export function Navbar2({ apiKey, page, setPage }: { apiKey: string; page: string; setPage: (newPage: string) => void }) {
 
   const handleNavClick = (newPage: string) => {
+    if (apiKey === '' && newPage !== "Home") {
+      alert("Please enter an API key in the Home page before taking the quiz.");
+      return;
+    }
     setPage(newPage);
   }
 
@@ -31,7 +35,7 @@ export function Navbar2({ page, setPage }: { page: string; setPage: (newPage: st
               {(page === "Detailed" && (<div className='navbar-selected'>Detailed</div>)) || (page !== "Detailed" && (<div>Detailed</div>))}
             </Nav.Link>
             <Nav.Link onClick={() => handleNavClick("Results")}>
-              {(page === "Results" && (<div className='navbar-selected'>Detailed</div>)) || (page !== "Results" && (<div>Results</div>))}
+              {(page === "Results" && (<div className='navbar-selected'>Results</div>)) || (page !== "Results" && (<div>Results</div>))}
             </Nav.Link>
           </Nav>
           <div className='ms-auto algin-items'>

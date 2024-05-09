@@ -8,16 +8,17 @@ import SubmitButton from './SubmitButton'
 interface QuestionData {
     question: string;
     answer: string;
-  }
+}
 
 
-export function DetailedPage({ savaDetailDataKey, detailQuestionData, setDetailQuestionData, page, setPage }: Readonly<{savaDetailDataKey: string, detailQuestionData: QuestionData[], setDetailQuestionData: (detailQuestionData: QuestionData[]) => void, page: string; setPage: (newPage: string) => void }>) {
+export function DetailedPage({ savaDetailDataKey, detailQuestionData, setDetailQuestionData, page, setPage }: Readonly<{ savaDetailDataKey: string, detailQuestionData: QuestionData[], setDetailQuestionData: (detailQuestionData: QuestionData[]) => void, page: string; setPage: (newPage: string) => void }>) {
     let questionKey = 0;
     const maxAnswerLength = 500;
+    const minAnswerLength = 25;
     const [questionNumber, setQuestionNumber] = React.useState(0);
 
     // Array of objects to store question and answer data
-    const [isFinished, setIsFinished] = React.useState(detailQuestionData.every((question) => question.answer.length > 0));
+    const [isFinished, setIsFinished] = React.useState(detailQuestionData.every((question) => question.answer.length > minAnswerLength));
 
     const handleSelect = (selectedIndex: number) => {
         setQuestionNumber(selectedIndex);
@@ -30,14 +31,14 @@ export function DetailedPage({ savaDetailDataKey, detailQuestionData, setDetailQ
             data[questionNumber] = { question: question, answer: e.target.value };
             setDetailQuestionData(data);
             // Check if all questions have been answered
-            setIsFinished(data.every((question) => question.answer.length > 0));
+            setIsFinished(data.every((question) => question.answer.length > minAnswerLength));
             // Save data to session storage
             sessionStorage.setItem(savaDetailDataKey, JSON.stringify(data));
         }
     }
 
     const calculateFilledAnswers = (data: QuestionData[]) => {
-        return data.filter(question => question.answer.trim() !== '').length;
+        return data.filter(question => question.answer.trim().length > minAnswerLength).length;
     }
 
     const filledAnswers = calculateFilledAnswers(detailQuestionData);

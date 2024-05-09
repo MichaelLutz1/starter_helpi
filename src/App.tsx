@@ -88,12 +88,12 @@ function App() {
   return (
     //renders the components corresponding to the state of the page
     <div className="App">
-      <Navbar2 page={page} setPage={changePage}></Navbar2>
-      {page === "Home" && <HomeScreen page={page} setPage={changePage}/>}
+      <Navbar2 apiKey={key} page={page} setPage={changePage}></Navbar2>
+      {page === "Home" && <HomeScreen apiKey={key} page={page} setPage={changePage}/>}
       {page === "Basic" && <BasicPage setBasicDataKey={saveBasicDataKey} basicQuestionData={basicQuestionData} setBasicQuestionData={setBasicQuestionData} page={page} setPage={changePage}/>}
       {page === "Detailed" && <DetailedPage savaDetailDataKey={saveDetailedDataKey} detailQuestionData={detailQuestionData} setDetailQuestionData={setDetailQuestionData} page={page} setPage={changePage}/>}
       {page === "About" && <AboutPage/>}
-      {page === "Results" && <ResultsPage APIKey={key} basicQuestionData={basicQuestionData} detailQuestionData={detailQuestionData}/>}
+      {page === "Results" && <ResultsPage APIKey={key} basicQuestionData={basicQuestionData} detailQuestionData={detailQuestionData} setPage={setPage}/>}
       <AppFooter changeKey={changeKey} handleSubmit={handleSubmit}/>
     </div>
   );
