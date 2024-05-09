@@ -53,7 +53,7 @@ const detailQuestions = [
   'What are the top three tasks you enjoy doing the most in your current or past jobs?',
   'What work environment do you thrive in? For example, fast-paced, structured, autonomous, etc.',
   'If you had unlimited resources, what kind of work would you want to do?',
-  'Can you identify any industries r careers that you have always found intriguing? Why?',
+  'Can you identify any industries or careers that you have always found intriguing? Why?',
   'What are your long-term career goals? Where do you see yourself in five to ten years?'
 ];
 
