@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import OpenAI from "openai";
 import './ResultsPage.css'
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { LoadingAnimation } from '../LoadingAnimation/LoadingAnimation'
 
 interface QuestionData {
@@ -102,20 +102,26 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
         <Button onClick={() => setPage('Home')} style={{backgroundColor: 'var(--purple)', borderColor: 'var(--purple)'}}>Return to Home</Button>
       </div> :
         content.map((choice, index) => (
-          <div key={index}>
-            <h2>{choice.career}</h2>
-            <h3>Reasons:</h3>
-            <ul>
-              {choice.reasons.map((reason, idx) => (
-                <li key={idx}>{reason}</li>
-              ))}
-            </ul>
-            <h3>Steps to Reach:</h3>
-            <ul>
-              {choice.steps.map((step, idx) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ul>
+          <div className = {"Result-Card"} key={index}>
+            <Card style={{ width: '50vw',color: 'white', backgroundColor: '#21273b'}}>
+              <Card.Header style={{ fontSize: 18, fontWeight: 'bold', padding: "1rem 0rem"}}>{choice.career}</Card.Header>
+              <Card.Body className={"results-body"}>
+                <Card.Text>
+                  <div style={{fontWeight: 'bold'}} className = {"Reasons-title"}>Reasons:</div>
+                  <ul>
+                    {choice.reasons.map((reason, idx) => (
+                      <li key={idx}>{reason}</li>
+                    ))}
+                  </ul>
+                  <div style={{fontWeight: 'bold'}} className = {"Steps-title"}>Steps to Reash:</div>
+                  <ul>
+                    {choice.steps.map((step, idx) => (
+                      <li key={idx}>{step}</li>
+                    ))}
+                  </ul>
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </div>
         ))
       } </div>
