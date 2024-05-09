@@ -99,7 +99,7 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
       <div> {loading ? <LoadingAnimation /> : content === null || error ? <div>
         <h1>Sorry, no results found.</h1>
         <p>Please try again with different answers.</p>
-        <Button onClick={() => setPage('Home')}>Return to Home</Button>
+        <Button onClick={() => setPage('Home')} style={{backgroundColor: 'var(--purple)', borderColor: 'var(--purple)'}}>Return to Home</Button>
       </div> :
         content.map((choice, index) => (
           <div key={index}>
