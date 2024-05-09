@@ -8,16 +8,27 @@ interface QuestionData {
   question: string;
   answer: string;
 }
+interface Careers {
+  career: string;
+  reasons: string[];
+  steps: string[];
+}
 
-export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, setPage }: { APIKey: string, basicQuestionData: QuestionData[], detailQuestionData: QuestionData[], setPage: (newPage: string) => void }): JSX.Element {
+export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, setPage }: { APIKey: string, basicQuestionData: QuestionData[], detailQuestionData: QuestionData[], setPage: (page: string) => void }) {
   const [error, setError] = React.useState<boolean>(false);
   const [loading, setLoading] = React.useState(false);
-  const [content, setContent] = React.useState("");
+  const [content, setContent] = React.useState<Careers[] | null>(null);
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const responseContent = await main();
-      setContent(JSON.stringify(responseContent));
+      const responseContent = await main() ?? '';
+      if (responseContent === '') {
+        setError(true);
+        return;
+      }
+      const responseCareers = JSON.parse(responseContent);
+      setContent(responseCareers.careers);
       setLoading(false)
     };
 
@@ -41,12 +52,20 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
 
   const createPrompt = (QuestionData: QuestionData[]): string => {
     let prompt: string = `Given the following questions and answers:\n\n`;
+    const jsonSchema = {
+      career: "string",
+      reasons: "Array of strings",
+      steps: "Array of strings",
+    }
 
     prompt += QuestionData.map((questionData, index) => {
       return `Question ${index + 1}: ${QuestionData[index].question}\nAnswer: ${QuestionData[index].answer}`;
     }).join('\n\n');
 
     prompt += `\n\nReturn me the 3 most ideal career choices, 2 reasons why for each, and a few steps they can take to reach their highest matched career`;
+
+    prompt += `\n\nThe JSON should be an array of objects called "careers" with this format:\n${JSON.stringify(jsonSchema, null, 2)}`;
+    console.log(prompt);
 
     return prompt;
   }
@@ -57,7 +76,7 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
         messages: [
           {
             role: "system",
-            content: "You are a career selection assistant. Help the user find the best job based on their preferences and skills."
+            content: "You are a career selection assistant. Help the user find the best job based on their preferences and skills. Return the results in a JSON object."
           },
           {
             role: "user",
@@ -65,32 +84,41 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
           }
         ],
         model: "gpt-4-turbo",
-      });
-
-      console.log(completion.choices[0].message.content);
-    }
-    catch (error) {
+        response_format: { type: "json_object" },
+      })
+      return completion.choices[0].message.content;
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
       setError(true);
     }
   }
 
-
-
   return (
     <div className="resultsContainer">
-      <div>
-        {error ? <div>
-          <h1>There was an error processing your response. Try resubmitting your api key</h1>
-          <Button onClick={() => setPage('Home')}>Return to Home</Button>
-
-        </div> :
-          <>
-            <h1>ResultsPage</h1>
-            <div> {loading && <LoadingAnimation />} </div>
-            <p> {!(loading) && content} </p>
-          </>
-        }
-      </div>
+      <div> {loading ? <LoadingAnimation /> : content === null || error ? <div>
+        <h1>Sorry, no results found.</h1>
+        <p>Please try again with different answers.</p>
+        <Button onClick={() => setPage('Home')}>Return to Home</Button>
+      </div> :
+        content.map((choice, index) => (
+          <div key={index}>
+            <h2>{choice.career}</h2>
+            <h3>Reasons:</h3>
+            <ul>
+              {choice.reasons.map((reason, idx) => (
+                <li key={idx}>{reason}</li>
+              ))}
+            </ul>
+            <h3>Steps to Reach:</h3>
+            <ul>
+              {choice.steps.map((step, idx) => (
+                <li key={idx}>{step}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      } </div>
     </div>
   )
 }
