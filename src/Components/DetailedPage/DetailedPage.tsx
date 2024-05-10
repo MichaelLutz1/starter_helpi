@@ -14,7 +14,7 @@ interface QuestionData {
 export function DetailedPage({ savaDetailDataKey, detailQuestionData, setDetailQuestionData, page, setPage }: Readonly<{ savaDetailDataKey: string, detailQuestionData: QuestionData[], setDetailQuestionData: (detailQuestionData: QuestionData[]) => void, page: string; setPage: (newPage: string) => void }>) {
     let questionKey = 0;
     const maxAnswerLength = 500;
-    const minAnswerLength = 25;
+    const minAnswerLength = 0;
     const [questionNumber, setQuestionNumber] = React.useState(0);
 
     // Array of objects to store question and answer data
