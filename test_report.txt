@@ -2,16 +2,19 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-  console.error
-    Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+PASS src/Components/DetailedPage/DetailedPage.test.tsx
+  ● Console
 
-    [0m [90m 4 |[39m
-     [90m 5 |[39m test([32m'renders learn react link'[39m[33m,[39m () [33m=>[39m {
-    [31m[1m>[22m[39m[90m 6 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
-     [90m   |[39m         [31m[1m^[22m[39m
-     [90m 7 |[39m   [36mconst[39m linkElement [33m=[39m screen[33m.[39mgetByText([35m/learn react/i[39m)[33m;[39m
-     [90m 8 |[39m   expect(linkElement)[33m.[39mtoBeInTheDocument()[33m;[39m
-     [90m 9 |[39m })[33m;[39m[0m
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m 25 |[39m         [36mconst[39m setPage [33m=[39m jest[33m.[39mfn()[33m;[39m 
+     [90m 26 |[39m         [36mconst[39m setDetail [33m=[39m jest[33m.[39mfn()[33m;[39m
+    [31m[1m>[22m[39m[90m 27 |[39m         render([33m<[39m[33mDetailedPage[39m page[33m=[39m{[32m"Home"[39m} setPage[33m=[39m{setPage} savaDetailDataKey[33m=[39m{[32m"BASIC_DATA"[39m} detailQuestionData[33m=[39m{detailData} setDetailQuestionData[33m=[39m{setDetail}[33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 28 |[39m         [36mconst[39m sliders [33m=[39m screen[33m.[39mgetAllByRole([32m"textbox"[39m)[33m;[39m
+     [90m 29 |[39m         expect(sliders[33m.[39mlength)[33m.[39mtoEqual([35m7[39m)[33m;[39m
+     [90m 30 |[39m     })[33m;[39m[0m
 
       at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
       at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
@@ -19,326 +22,78 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:6:9)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+      at Object.<anonymous> (src/Components/DetailedPage/DetailedPage.test.tsx:27:15)
 
-FAIL src/App.test.tsx
-  ✕ renders learn react link (89 ms)
+PASS src/Components/BasicPage/BasicPage.test.tsx
+  ● Console
 
-  ● renders learn react link
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
 
-    TestingLibraryElementError: Unable to find an element with the text: /learn react/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+    [0m [90m 23 |[39m         [36mconst[39m setPage [33m=[39m jest[33m.[39mfn()[33m;[39m 
+     [90m 24 |[39m         [36mconst[39m setBasic [33m=[39m jest[33m.[39mfn()[33m;[39m
+    [31m[1m>[22m[39m[90m 25 |[39m         render([33m<[39m[33mBasicPage[39m page[33m=[39m{[32m"Home"[39m} setPage[33m=[39m{setPage} setBasicDataKey[33m=[39m{[32m"BASIC_DATA"[39m} basicQuestionData[33m=[39m{basicData} setBasicQuestionData[33m=[39m{setBasic}[33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 26 |[39m         [36mconst[39m sliders [33m=[39m screen[33m.[39mgetAllByRole([32m"slider"[39m)[33m;[39m
+     [90m 27 |[39m         expect(sliders[33m.[39mlength)[33m.[39mtoEqual([35m7[39m)[33m;[39m
+     [90m 28 |[39m     })[33m;[39m[0m
 
-    Ignored nodes: comments, script, style
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<nav[39m
-            [33mclass[39m=[32m"navbar navbar-expand-lg navbar-light sticky-top"[39m
-            [33mdata-bs-theme[39m=[32m"dark"[39m
-            [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59); height: 4rem; margin-top: .25rem; margin-right: .25rem; margin-left: .25rem;"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"container-fluid"[39m
-            [36m>[39m
-              [36m<a[39m
-                [33mclass[39m=[32m"brand-logo navbar-brand"[39m
-                [33mhref[39m=[32m"#home"[39m
-              [36m>[39m
-                [36m<img[39m
-                  [33malt[39m=[32m"logo"[39m
-                  [33mclass[39m=[32m"logo-img"[39m
-                  [33msrc[39m=[32m"FinalLogo.png"[39m
-                [36m/>[39m
-              [36m</a>[39m
-              [36m<button[39m
-                [33maria-controls[39m=[32m"basic-navbar-nav"[39m
-                [33maria-label[39m=[32m"Toggle navigation"[39m
-                [33mclass[39m=[32m"navbar-toggler collapsed"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [36m<span[39m
-                  [33mclass[39m=[32m"navbar-toggler-icon"[39m
-                [36m/>[39m
-              [36m</button>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"navbar-collapse navbar-collapse collapse"[39m
-                [33mid[39m=[32m"basic-navbar-nav"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"d-flex flex-grow-1 align-items-left me-auto navbar-nav"[39m
-                [36m>[39m
-                  [36m<a[39m
-                    [33mclass[39m=[32m"nav-link"[39m
-                    [33mhref[39m=[32m"#"[39m
-                    [33mrole[39m=[32m"button"[39m
-                    [33mtabindex[39m=[32m"0"[39m
-                  [36m>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"navbar-selected"[39m
-                    [36m>[39m
-                      [0mHome[0m
-                    [36m</div>[39m
-                  [36m</a>[39m
-                  [36m<a[39m
-                    [33mclass[39m=[32m"nav-link"[39m
-                    [33mhref[39m=[32m"#"[39m
-                    [33mrole[39m=[32m"button"[39m
-                    [33mtabindex[39m=[32m"0"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [0mBasic[0m
-                    [36m</div>[39m
-                  [36m</a>[39m
-                  [36m<a[39m
-                    [33mclass[39m=[32m"nav-link"[39m
-                    [33mhref[39m=[32m"#"[39m
-                    [33mrole[39m=[32m"button"[39m
-                    [33mtabindex[39m=[32m"0"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [0mDetailed[0m
-                    [36m</div>[39m
-                  [36m</a>[39m
-                  [36m<a[39m
-                    [33mclass[39m=[32m"nav-link"[39m
-                    [33mhref[39m=[32m"#"[39m
-                    [33mrole[39m=[32m"button"[39m
-                    [33mtabindex[39m=[32m"0"[39m
-                  [36m>[39m
-                    [36m<div>[39m
-                      [0mResults[0m
-                    [36m</div>[39m
-                  [36m</a>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"ms-auto algin-items"[39m
-                [36m>[39m
-                  [36m<div>[39m
-                    [36m<button[39m
-                      [33mclass[39m=[32m"btn btn-primary"[39m
-                      [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
-                      [33mtype[39m=[32m"button"[39m
-                    [36m>[39m
-                      [36m<svg[39m
-                        [33mfill[39m=[32m"currentColor"[39m
-                        [33mheight[39m=[32m"1em"[39m
-                        [33mstroke[39m=[32m"currentColor"[39m
-                        [33mstroke-width[39m=[32m"0"[39m
-                        [33mviewBox[39m=[32m"0 0 16 16"[39m
-                        [33mwidth[39m=[32m"1em"[39m
-                        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
-                      [36m>[39m
-                        [36m<path[39m
-                          [33md[39m=[32m"m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"[39m
-                        [36m/>[39m
-                      [36m</svg>[39m
-                    [36m</button>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</nav>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"Container"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"Title"[39m
-            [36m>[39m
-              [36m<h1>[39m
-                [0mDiscover your dream [0m
-                [36m<span[39m
-                  [33mstyle[39m=[32m"color: rgb(105, 35, 255);"[39m
-                [36m>[39m
-                  [0mCareer[0m
-                [36m</span>[39m
-              [36m</h1>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"card-container"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"card"[39m
-                [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59);"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"card-header"[39m
-                  [33mstyle[39m=[32m"font-size: 18px; font-weight: bold; padding: 1rem 0rem;"[39m
-                [36m>[39m
-                  [0mBasic Quiz[0m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"card-body"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"card-desc card-text"[39m
-                  [36m>[39m
-                    [0mIf you're looking for a quick quiz use this choice! A few brief questions with simple answers is all that will be asked to give you an accurate option of the ideal career for you! With the power of AI, your answers will be used to suggest a job that would make you feel fulfilled.[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary"[39m
-                    [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mTake Quiz![0m
-                  [36m</button>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"card"[39m
-                [33mstyle[39m=[32m"color: white; background-color: rgb(33, 39, 59);"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"card-header"[39m
-                  [33mstyle[39m=[32m"font-size: 18px; font-weight: bold; padding: 1rem 0rem;"[39m
-                [36m>[39m
-                  [0mDetailed Quiz[0m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mclass[39m=[32m"card-body"[39m
-                [36m>[39m
-                  [36m<p[39m
-                    [33mclass[39m=[32m"card-desc card-text"[39m
-                  [36m>[39m
-                    [0mIf you want a more in depth assessment of the career that you were made for, choose this quiz! You will be asked more in depth questions and provoke more thoughts about your interests and personality. This quiz will also use AI to refine your answer even further and give a more specific answer.[0m
-                  [36m</p>[39m
-                [36m</div>[39m
-                [36m<div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary"[39m
-                    [33mstyle[39m=[32m"border-color: #6923ff; background-color: rgb(105, 35, 255); margin: 1rem;"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mTake Quiz![0m
-                  [36m</button>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"container0"[39m
-          [36m>[39m
-            [36m<a[39m
-              [33mhref[39m=[32m"https://github.com/MichaelLutz1/starter_helpi"[39m
-              [33mrel[39m=[32m"noreferrer"[39m
-              [33mtarget[39m=[32m"_blank"[39m
-            [36m>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [36m<svg[39m
-                  [33mfill[39m=[32m"currentColor"[39m
-                  [33mheight[39m=[32m"1em"[39m
-                  [33mstroke[39m=[32m"currentColor"[39m
-                  [33mstroke-width[39m=[32m"0"[39m
-                  [33mviewBox[39m=[32m"0 0 16 16"[39m
-                  [33mwidth[39m=[32m"1em"[39m
-                  [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
-                [36m>[39m
-                  [36m<path[39m
-                    [33md[39m=[32m"M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"[39m
-                  [36m/>[39m
-                [36m</svg>[39m
-              [36m</button>[39m
-            [36m</a>[39m
-            [36m<form[39m
-              [33mclass[39m=[32m""[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"input-group"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-control"[39m
-                  [33mplaceholder[39m=[32m"Insert API Key Here"[39m
-                  [33mtype[39m=[32m"password"[39m
-                [36m/>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"Submit-Button btn btn-primary"[39m
-                  [33mstyle[39m=[32m"background-color: rgb(105, 35, 255); border-color: #6923ff;"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mSubmit[0m
-                [36m</button>[39m
-              [36m</div>[39m
-            [36m</form>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"names-container"[39m
-            [36m>[39m
-              [36m<span>[39m
-                [0mMade by: [0m
-              [36m</span>[39m
-              [36m<a[39m
-                [33mclass[39m=[32m"gh-profile"[39m
-                [33mhref[39m=[32m"https://github.com/Mforte5115"[39m
-                [33mrel[39m=[32m"noreferrer"[39m
-                [33mtarget[39m=[32m"_blank"[39m
-              [36m>[39m
-                [0mMichael Forte[0m
-              [36m</a>[39m
-              [0m,[0m
-              [36m<a[39m
-                [33mclass[39m=[32m"gh-profile"[39m
-                [33mhref[39m=[32m"https://github.com/MichaelLutz1"[39m
-                [33mrel[39m=[32m"noreferrer"[39m
-                [33mtarget[39m=[32m"_blank"[39m
-              [36m>[39m
-                [0m Michael Lutz[0m
-              [36m</a>[39m
-              [0m,[0m
-              [36m<a[39m
-                [33mclass[39m=[32m"gh-profile"[39m
-                [33mhref[39m=[32m"https://github.com/jacobwilbe"[39m
-                [33mrel[39m=[32m"noreferrer"[39m
-                [33mtarget[39m=[32m"_blank"[39m
-              [36m>[39m
-                [0m Jacob Wilber[0m
-              [36m</a>[39m
-              [0m,[0m
-              [36m<a[39m
-                [33mclass[39m=[32m"gh-profile"[39m
-                [33mhref[39m=[32m"https://github.com/ColinP5"[39m
-                [33mrel[39m=[32m"noreferrer"[39m
-                [33mtarget[39m=[32m"_blank"[39m
-              [36m>[39m
-                [0m Colin Parsons[0m
-              [36m</a>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/BasicPage/BasicPage.test.tsx:25:15)
 
-    [0m [90m  5 |[39m test([32m'renders learn react link'[39m[33m,[39m () [33m=>[39m {
-     [90m  6 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
-    [31m[1m>[22m[39m[90m  7 |[39m   [36mconst[39m linkElement [33m=[39m screen[33m.[39mgetByText([35m/learn react/i[39m)[33m;[39m
-     [90m    |[39m                              [31m[1m^[22m[39m
-     [90m  8 |[39m   expect(linkElement)[33m.[39mtoBeInTheDocument()[33m;[39m
-     [90m  9 |[39m })[33m;[39m
-     [90m 10 |[39m[0m
+PASS src/Components/HomeScreen/HomeScreen.test.tsx
+  ● Console
 
-      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
-      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
-      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
-      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
-      at Object.<anonymous> (src/App.test.tsx:7:30)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m 36 |[39m describe([32m"HomeScreen Component tests"[39m[33m,[39m () [33m=>[39m {
+     [90m 37 |[39m     test([32m"The HomePage contains both buttons"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 38 |[39m         render([33m<[39m[33mHomeScreen[39m page[33m=[39m{[32m"Home"[39m} setPage[33m=[39m{[36mfunction[39m (newPage[33m:[39m string)[33m:[39m [36mvoid[39m {
+     [90m    |[39m               [31m[1m^[22m[39m
+     [90m 39 |[39m             [36mthrow[39m [36mnew[39m [33mError[39m([32m"Function not implemented."[39m)[33m;[39m
+     [90m 40 |[39m         } } apiKey[33m=[39m{[32m""[39m} [33m/[39m[33m>[39m)[33m;[39m
+     [90m 41 |[39m         expect(screen[33m.[39mgetAllByRole([32m"button"[39m))[33m.[39mtoHaveLength([35m2[39m)[33m;[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/HomeScreen/HomeScreen.test.tsx:38:15)
+
+PASS src/App.test.tsx
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m  5 |[39m
+     [90m  6 |[39m test([32m'renders learn react link'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  7 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m  8 |[39m   [36mconst[39m linkElement [33m=[39m screen[33m.[39mgetByText([35m/Discover/i[39m)[33m;[39m
+     [90m  9 |[39m   expect(linkElement)[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 10 |[39m })[33m;[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.tsx:7:9)
 
 ---------------------------------|---------|----------|---------|---------|-------------------
 File                             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------------------|---------|----------|---------|---------|-------------------
-All files                        |   22.79 |    30.43 |   13.63 |    22.7 |                   
+All files                        |   45.07 |    40.57 |   39.39 |   43.78 |                   
  src                             |   55.55 |    45.45 |    37.5 |   53.48 |                   
   App.tsx                        |   73.52 |    55.55 |      50 |   71.87 | 21,29,47,64,75-86 
   index.tsx                      |       0 |      100 |     100 |       0 | 8-20              
@@ -349,19 +104,19 @@ All files                        |   22.79 |    30.43 |   13.63 |    22.7 |
   AboutPage.tsx                  |       0 |      100 |       0 |       0 | 12                
  src/Components/AppFooter        |      75 |      100 |      50 |      75 |                   
   AppFooter.tsx                  |      75 |      100 |      50 |      75 | 11                
- src/Components/BasicButton      |   33.33 |        0 |      50 |   33.33 |                   
-  BasicButtton.tsx               |   33.33 |        0 |      50 |   33.33 | 10-14             
- src/Components/BasicPage        |   15.62 |        0 |       0 |   17.24 |                   
-  BasicPage.tsx                  |      16 |      100 |       0 |   18.18 | 56-88             
-  Rangeslider.tsx                |   14.28 |        0 |       0 |   14.28 | 12-32             
+ src/Components/BasicButton      |   66.66 |       50 |     100 |   66.66 |                   
+  BasicButtton.tsx               |   66.66 |       50 |     100 |   66.66 | 11-12             
+ src/Components/BasicPage        |    62.5 |    71.42 |      70 |   62.06 |                   
+  BasicPage.tsx                  |      68 |      100 |      75 |   68.18 | 59-67             
+  Rangeslider.tsx                |   42.85 |    71.42 |      50 |   42.85 | 29-32             
  src/Components/CircleImages     |      20 |        0 |       0 |      20 |                   
   CircleImage.tsx                |      20 |        0 |       0 |      20 | 5-11              
- src/Components/DetailedButton   |   33.33 |        0 |      50 |   33.33 |                   
-  DetailedButton.tsx             |   33.33 |        0 |      50 |   33.33 | 9-13              
- src/Components/DetailedPage     |       5 |        0 |       0 |     5.4 |                   
-  AnswerBox.tsx                  |      20 |      100 |       0 |      20 | 10-16             
-  DetailedPage.tsx               |       0 |        0 |       0 |       0 | 15-62             
-  SubmitButton.tsx               |    9.09 |      100 |       0 |    9.09 | 6-25              
+ src/Components/DetailedButton   |   66.66 |       50 |     100 |   66.66 |                   
+  DetailedButton.tsx             |   66.66 |       50 |     100 |   66.66 | 10-11             
+ src/Components/DetailedPage     |      65 |        0 |      50 |   64.86 |                   
+  AnswerBox.tsx                  |      60 |      100 |      50 |      60 | 15-16             
+  DetailedPage.tsx               |   66.66 |        0 |    62.5 |   66.66 | 24,29-36          
+  SubmitButton.tsx               |   63.63 |      100 |   33.33 |   63.63 | 10-11,20-25       
  src/Components/HomeScreen       |     100 |      100 |     100 |     100 |                   
   HomeScreen.tsx                 |     100 |      100 |     100 |     100 |                   
  src/Components/LoadingAnimation |       0 |      100 |       0 |       0 |                   
@@ -371,8 +126,9 @@ All files                        |   22.79 |    30.43 |   13.63 |    22.7 |
  src/Components/ResultsPage      |       0 |        0 |       0 |       0 |                   
   ResultsPage.tsx                |       0 |        0 |       0 |       0 | 18-119            
 ---------------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 1 total
+
+Test Suites: 4 passed, 4 total
+Tests:       7 passed, 7 total
 Snapshots:   0 total
-Time:        3.052 s
+Time:        4.837 s
 Ran all test suites.
