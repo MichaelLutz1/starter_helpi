@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/starter_helpi/static/css/main.c4b2d17a.css",
-    "main.js": "/starter_helpi/static/js/main.a5281572.js",
+    "main.js": "/starter_helpi/static/js/main.064aff73.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
-    "static/media/Musky.jpg": "/starter_helpi/static/media/Musky.30d46ae4abbd24562488.jpg",
+    "static/media/MLutz-headshot.png": "/starter_helpi/static/media/MLutz-headshot.18979ca5c24dffede7de.png",
     "static/media/FinalLogo.png": "/starter_helpi/static/media/FinalLogo.2f115529abae04d610c6.png",
-    "static/media/Zuck.png": "/starter_helpi/static/media/Zuck.45b69f31bb5f6a2040b3.png",
+    "static/media/Aromando.png": "/starter_helpi/static/media/Aromando.c5986097978d72ed7dda.png",
     "index.html": "/starter_helpi/index.html",
     "main.c4b2d17a.css.map": "/starter_helpi/static/css/main.c4b2d17a.css.map",
-    "main.a5281572.js.map": "/starter_helpi/static/js/main.a5281572.js.map",
+    "main.064aff73.js.map": "/starter_helpi/static/js/main.064aff73.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4b2d17a.css",
-    "static/js/main.a5281572.js"
+    "static/js/main.064aff73.js"
   ]
 }
