@@ -27,7 +27,6 @@ const RangeSlider: FunctionComponent<RangeSliderProps> = ({handleChange, questio
           step={1}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             const newRange = e.target.value;
-            console.log("Slider value before state update:", newRange);
             setRange(newRange);
             handleChange(question, newRange);
           }}

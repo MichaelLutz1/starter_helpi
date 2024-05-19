@@ -33,6 +33,8 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
     };
 
     fetchData();
+    // eslint disabled for next line to avoid infinite loop 
+    // empty array is necessary to run useEffect only once
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -65,12 +67,12 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
     prompt += `\n\nReturn me the 3 most ideal career choices, 2 reasons why for each, and a few steps they can take to reach their highest matched career`;
 
     prompt += `\n\nThe JSON should be an array of objects called "careers" with this format:\n${JSON.stringify(jsonSchema, null, 2)}`;
-    console.log(prompt);
 
     return prompt;
   }
 
   async function main() {
+    // Call the OpenAI API
     try {
       const completion = await client.chat.completions.create({
         messages: [
@@ -99,21 +101,21 @@ export function ResultsPage({ APIKey, basicQuestionData, detailQuestionData, set
       <div> {loading ? <LoadingAnimation /> : content === null || error ? <div>
         <h1>Sorry, no results found.</h1>
         <p>Please try again with different answers.</p>
-        <Button onClick={() => setPage('Home')} style={{backgroundColor: 'var(--purple)', borderColor: 'var(--purple)'}}>Return to Home</Button>
+        <Button onClick={() => setPage('Home')} style={{ backgroundColor: 'var(--purple)', borderColor: 'var(--purple)' }}>Return to Home</Button>
       </div> :
         content.map((choice, index) => (
-          <div className = {"Result-Card"} key={index}>
-            <Card style={{ width: '50vw',color: 'white', backgroundColor: '#21273b'}}>
-              <Card.Header style={{ fontSize: 18, fontWeight: 'bold', padding: "1rem 0rem"}}>{choice.career}</Card.Header>
+          <div className={"Result-Card"} key={index}>
+            <Card style={{ width: '50vw', color: 'white', backgroundColor: '#21273b' }}>
+              <Card.Header style={{ fontSize: 18, fontWeight: 'bold', padding: "1rem 0rem" }}>{choice.career}</Card.Header>
               <Card.Body className={"results-body"}>
                 <Card.Text>
-                  <div style={{fontWeight: 'bold'}} className = {"Reasons-title"}>Reasons:</div>
+                  <div style={{ fontWeight: 'bold' }} className={"Reasons-title"}>Reasons:</div>
                   <ul>
                     {choice.reasons.map((reason, idx) => (
                       <li key={idx}>{reason}</li>
                     ))}
                   </ul>
-                  <div style={{fontWeight: 'bold'}} className = {"Steps-title"}>Steps to Reash:</div>
+                  <div style={{ fontWeight: 'bold' }} className={"Steps-title"}>Steps to Reash:</div>
                   <ul>
                     {choice.steps.map((step, idx) => (
                       <li key={idx}>{step}</li>

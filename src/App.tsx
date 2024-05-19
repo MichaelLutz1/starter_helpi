@@ -14,6 +14,7 @@ interface QuestionData {
 }
 
 
+//page navigation: pageData is the default page that will be displayed when the user first opens the site. If the user navigates to a different page, the pageData will be updated to that page.
 let pageData = "Home";
 const savePageKey = "MYPAGE";
 const currPage = sessionStorage.getItem(savePageKey);
