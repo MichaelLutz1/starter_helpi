@@ -64,7 +64,6 @@ export function BasicPage({ setBasicDataKey, basicQuestionData, setBasicQuestion
         setIsFinished(data.every((question) => question.answer.length > 0));
         // Save data to local storage
         sessionStorage.setItem(setBasicDataKey, JSON.stringify(data));
-        console.log(data)
     };
 
     const calculateFilledAnswers = (data: QuestionData[]) => {

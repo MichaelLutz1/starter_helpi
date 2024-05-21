@@ -9,6 +9,7 @@ import AboutButton from '../AboutButton/AboutButton'
 export function Navbar2({ apiKey, page, setPage }: { apiKey: string; page: string; setPage: (newPage: string) => void }) {
 
   const handleNavClick = (newPage: string) => {
+    // Check if API key is entered before taking the quiz
     if (apiKey === '' && newPage !== "Home") {
       alert("Please enter an API key in the Home page before taking the quiz.");
       return;
